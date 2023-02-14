@@ -1,0 +1,48 @@
+============================1============================
+The box of chocolates fits inside the box.
+Bigger_than = index(1,5) - none
+Entity1 - box - index(1,8) - noun - null - null
+Entity2 - box_of_chocolate - index(1,2) - noun - null - null
+
+============================2============================
+The box of chocolates fits inside the box.
+Bigger_than = index(2,5) - none
+Entity1 - box - index(2,8) - noun - null - null
+Entity2 - box_of_chocolate - index(2,2) - noun - null - null
+
+============================3============================
+The container fits inside the box.
+Bigger_than = index(3,3) - none
+Entity1 - box - index(3,6) - noun - null - null
+Entity2 - container - index(3,2) - noun - null - null
+
+============================4============================
+The suitcase is bigger than the container.
+Bigger_than = index(4,4) - none
+Entity1 - suitcase - index(4,2) - noun - null - null
+Entity2 - container - index(4,7) - noun - null - null
+
+============================5============================
+The suitcase fits inside the chest.
+Bigger_than = index(5,3) - none
+Entity1 - chest - index(5,6) - noun - null - null
+Entity2 - suitcase - index(5,2) - noun - null - null
+
+============================6============================
+Does the container fit in the chest?
+Bigger_than = index(6,4) - none
+Entity1 - chest - index(6,7) - noun - null - null
+Entity2 - container - index(6,3) - noun - null - null
+
+============================7============================
+Is the container bigger than the chest?
+Bigger_than = index(7,4) - none
+Entity1 - container - index(7,3) - noun - null - null
+Entity2 - chest - index(7,7) - noun - null - null
+
+============================8============================
+Does the chest fit in the container?
+Bigger_than = index(8,4) - none
+Entity1 - container - index(8,7) - noun - null - null
+Entity2 - chest - index(8,3) - noun - null - null
+

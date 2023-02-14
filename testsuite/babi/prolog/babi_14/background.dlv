@@ -1,0 +1,51 @@
+happensAt(frame("Travel",[fe("Person",mary),fe("Place",kitchen)]),2).
+happensAt(frame("Travel",[fe("Person",mary),fe("Place",cinema)]),3).
+happensAt(frame("Travel",[fe("Person",bill),fe("Place",bedroom)]),1).
+happensAt(frame("Travel",[fe("Person",mary),fe("Place",school)]),1).
+happensAt(frame("Travel",[fe("Person",fred),fe("Place",cinema)]),1).
+happensAt(frame("Travel",[fe("Person",bill),fe("Place",office)]),2).
+happensAt(frame("Travel",[fe("Person",mary),fe("Place",school)]),4).
+happensAt(frame("Travel",[fe("Person",bill),fe("Place",kitchen)]),3).
+
+
+
+var(bedroom).
+var(school).
+var(cinema).
+var(kitchen).
+var(office).
+var(park).
+var(mary).
+var(bill).
+var(fred).
+var(julie).
+time(1..5).
+
+
+
+initiates(frame("Travel",[fe("Person",Person),fe("Place",Place)]),frame("Located",[fe("Entity",Person),fe("Place",Place)])) :-
+    var(Person), var(Place).
+
+terminates(frame("Travel",[fe("Person",Person),fe("Place",Place)]),frame("Located",[fe("Entity",Person),fe("Place",Place2)])) :-
+    var(Person), var(Place), var(Place2),
+    Place != Place2.
+
+
+
+holdsAt(F,T2) :-
+    happensAt(A,T1), initiates(A,F), time(T2), T1 < T2,
+    not stoppedIn(T1,F,T2).
+
+stoppedIn(T1,F,T2) :- 
+    happensAt(A,T), terminates(A,F), time(T1), T1 < T, time(T2), T < T2.
+
+
+
+questionedAt(frame("Located",[fe("Entity",Thing),fe("Place",Place),fe("Before_place",Place2)]),T) :-
+    holdsAt(frame("Located",[fe("Entity",Thing),fe("Place",Place2)]),T),
+	T2 = T - 1,
+	holdsAt(frame("Located",[fe("Entity",Thing),fe("Place",Place)]),T2),
+	Place != Place2.
+    
+
+questionedAt(frame("Located",[fe("Entity",Thing),fe("Place",Place),fe("Before_place",Place2)]),T)?

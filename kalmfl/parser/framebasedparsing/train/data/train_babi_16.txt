@@ -1,0 +1,5 @@
+Brian is white.
+Mary is a rhino.
+What color is Brian?
+An entity is a certain color.
+An entity belongs to a type.

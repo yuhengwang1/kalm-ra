@@ -1,0 +1,174 @@
+============================1============================
+John took the football there.
+Obtain = index(1,2) - none
+Person - john - index(1,1) - propn - person - null
+Theme - football - index(1,4) - noun - null - null
+
+============================2============================
+John left the football.
+Discard = index(2,2) - none
+Person - john - index(2,1) - propn - person - null
+Theme - football - index(2,4) - noun - null - null
+
+============================3============================
+Mary went back to the bathroom.
+Travel = index(3,2) - none
+Person - mary - index(3,1) - propn - person - null
+Place - bathroom - index(3,6) - noun - null - null
+
+============================4============================
+Sandra got the football there.
+Obtain = index(4,2) - none
+Person - sandra - index(4,1) - propn - person - null
+Theme - football - index(4,4) - noun - null - null
+
+============================5============================
+Daniel journeyed to the kitchen.
+Travel = index(5,2) - none
+Person - daniel - index(5,1) - propn - person - null
+Place - kitchen - index(5,5) - noun - null - null
+
+============================6============================
+John journeyed to the bedroom.
+Travel = index(6,2) - none
+Person - john - index(6,1) - propn - person - null
+Place - bedroom - index(6,5) - noun - null - null
+
+============================7============================
+Sandra dropped the football.
+Discard = index(7,2) - none
+Person - sandra - index(7,1) - propn - person - null
+Theme - football - index(7,4) - noun - null - null
+
+============================8============================
+Mary moved to the kitchen.
+Travel = index(8,2) - none
+Person - mary - index(8,1) - propn - person - null
+Place - kitchen - index(8,5) - noun - null - null
+
+============================9============================
+Daniel grabbed the apple there.
+Obtain = index(9,2) - none
+Person - daniel - index(9,1) - propn - person - null
+Theme - apple - index(9,4) - noun - null - null
+
+============================10============================
+Mary went to the bathroom.
+Travel = index(10,2) - none
+Person - mary - index(10,1) - propn - person - null
+Place - bathroom - index(10,5) - noun - null - null
+
+============================11============================
+Mary moved to the bedroom.
+Travel = index(11,2) - none
+Person - mary - index(11,1) - propn - person - null
+Place - bedroom - index(11,5) - noun - null - null
+
+============================12============================
+John went back to the bathroom.
+Travel = index(12,2) - none
+Person - john - index(12,1) - propn - person - null
+Place - bathroom - index(12,6) - noun - null - null
+
+============================13============================
+Daniel discarded the apple there.
+Discard = index(13,2) - none
+Person - daniel - index(13,1) - propn - person - null
+Theme - apple - index(13,4) - noun - null - null
+
+============================14============================
+Mary travelled to the kitchen.
+Travel = index(14,2) - none
+Person - mary - index(14,1) - propn - person - null
+Place - kitchen - index(14,5) - noun - null - null
+
+============================15============================
+Where is the apple?
+Located = index(15,1) - none
+Entity - apple - index(15,4) - noun - null - null
+Place - where - index(15,1) - adv - null - null
+
+============================16============================
+Sandra picked up the football there.
+Obtain = index(16,2) - none
+Person - sandra - index(16,1) - propn - person - null
+Theme - football - index(16,5) - noun - null - null
+
+============================17============================
+Sandra left the football there.
+Discard = index(17,2) - none
+Person - sandra - index(17,1) - propn - person - null
+Theme - football - index(17,4) - noun - null - null
+
+============================18============================
+Where is the apple?
+Located = index(18,1) - none
+Entity - apple - index(18,4) - noun - null - null
+Place - where - index(18,1) - adv - null - null
+
+============================19============================
+Mary went to the hallway.
+Travel = index(19,2) - none
+Person - mary - index(19,1) - propn - person - null
+Place - hallway - index(19,5) - noun - null - null
+
+============================20============================
+Daniel got the apple there.
+Obtain = index(20,2) - none
+Person - daniel - index(20,1) - propn - person - null
+Theme - apple - index(20,4) - noun - null - null
+
+============================21============================
+Daniel travelled to the hallway.
+Travel = index(21,2) - none
+Person - daniel - index(21,1) - propn - person - null
+Place - hallway - index(21,5) - noun - null - null
+
+============================22============================
+Mary took the football there.
+Obtain = index(22,2) - none
+Person - mary - index(22,1) - propn - person - null
+Theme - football - index(22,4) - noun - null - null
+
+============================23============================
+Where is the apple?
+Located = index(23,1) - none
+Entity - apple - index(23,4) - noun - null - null
+Place - where - index(23,1) - adv - null - null
+
+============================24============================
+John travelled to the hallway.
+Travel = index(24,2) - none
+Person - john - index(24,1) - propn - person - null
+Place - hallway - index(24,5) - noun - null - null
+
+============================25============================
+Mary put down the football.
+Discard = index(25,2) - none
+Person - mary - index(25,1) - propn - person - null
+Theme - football - index(25,5) - noun - null - null
+
+============================26============================
+Where is the football?
+Located = index(26,1) - none
+Entity - football - index(26,4) - noun - null - null
+Place - where - index(26,1) - adv - null - null
+
+============================27============================
+Mary went back to the bedroom.
+Travel = index(27,2) - none
+Person - mary - index(27,1) - propn - person - null
+Place - bedroom - index(27,6) - noun - null - null
+
+============================28============================
+John went back to the office.
+Travel = index(28,2) - none
+Person - john - index(28,1) - propn - person - null
+Place - office - index(28,6) - noun - null - null
+
+============================29============================
+Where is the football?
+Located = index(29,1) - none
+Entity - football - index(29,4) - noun - null - null
+Place - where - index(29,1) - adv - null - null
+

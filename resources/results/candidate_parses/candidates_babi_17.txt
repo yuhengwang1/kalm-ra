@@ -1,0 +1,78 @@
+============================1============================
+The pink rectangle is to the left of the triangle.
+Left_of = index(1,7) - none
+Color1 - pink - index(1,2) - adj - null - null
+Shape1 - rectangle - index(1,3) - noun - null - null
+Shape2 - triangle - index(1,10) - noun - null - null
+
+============================2============================
+The triangle is to the left of the blue square.
+Left_of = index(2,6) - none
+Shape1 - triangle - index(2,2) - noun - null - null
+Color2 - blue - index(2,9) - adj - null - null
+Shape2 - square - index(2,10) - noun - null - null
+
+============================3============================
+Is the blue square above the pink rectangle?
+Above = index(3,5) - none
+Color1 - blue - index(3,3) - adj - null - null
+Shape1 - square - index(3,4) - noun - null - null
+Color2 - pink - index(3,7) - adj - null - null
+Shape2 - rectangle - index(3,8) - noun - null - null
+
+============================4============================
+Is the pink rectangle to the left of the blue square?
+Left_of = index(4,7) - none
+Color1 - pink - index(4,3) - noun - null - null
+Shape1 - rectangle - index(4,4) - noun - null - null
+Color2 - blue - index(4,10) - adj - null - null
+Shape2 - square - index(4,11) - noun - null - null
+
+============================5============================
+Is the pink rectangle above the blue square?
+Above = index(5,5) - none
+Color1 - pink - index(5,3) - noun - null - null
+Shape1 - rectangle - index(5,4) - noun - null - null
+Color2 - blue - index(5,7) - adj - null - null
+Shape2 - square - index(5,8) - noun - null - null
+
+============================6============================
+Is the blue square to the right of the pink rectangle?
+Right_of = index(6,7) - none
+Color1 - blue - index(6,3) - adj - null - null
+Shape1 - square - index(6,4) - noun - null - null
+Color2 - pink - index(6,10) - adj - null - null
+Shape2 - rectangle - index(6,11) - noun - null - null
+
+============================7============================
+Is the pink rectangle to the left of the blue square?
+Left_of = index(7,7) - none
+Color1 - pink - index(7,3) - noun - null - null
+Shape1 - rectangle - index(7,4) - noun - null - null
+Color2 - blue - index(7,10) - adj - null - null
+Shape2 - square - index(7,11) - noun - null - null
+
+============================8============================
+Is the pink rectangle to the right of the blue square?
+Right_of = index(8,7) - none
+Color1 - pink - index(8,3) - noun - null - null
+Shape1 - rectangle - index(8,4) - noun - null - null
+Color2 - blue - index(8,10) - adj - null - null
+Shape2 - square - index(8,11) - noun - null - null
+
+============================9============================
+Is the pink rectangle to the left of the blue square?
+Left_of = index(9,7) - none
+Color1 - pink - index(9,3) - noun - null - null
+Shape1 - rectangle - index(9,4) - noun - null - null
+Color2 - blue - index(9,10) - adj - null - null
+Shape2 - square - index(9,11) - noun - null - null
+
+============================10============================
+Is the blue square to the right of the pink rectangle?
+Right_of = index(10,7) - none
+Color1 - blue - index(10,3) - adj - null - null
+Shape1 - square - index(10,4) - noun - null - null
+Color2 - pink - index(10,10) - adj - null - null
+Shape2 - rectangle - index(10,11) - noun - null - null
+

@@ -1,0 +1,10 @@
+frame(people_by_age,[fe(doctor,doc),fe(patient,pat),fe(type,child)]).
+frame(medical_conditions,[fe(doctor,doc),fe(patient,pat),fe(aliment,uti)]).
+
+frame(cure,[fe(doctor,Doctor),fe(patient,Patient),fe(therapy,antimicrobial),fe(limit,least),fe(days,7)]) :-
+    frame(people_by_age,[fe(doctor,Doctor),fe(patient,Patient),fe(type,child)]),
+    frame(medical_conditions,[fe(doctor,Doctor),fe(patient,Patient),fe(aliment,uti)]).
+
+frame(cure,[fe(doctor,Doctor),fe(patient,Patient),fe(therapy,antimicrobial),fe(limit,most),fe(days,14)]) :-
+    frame(people_by_age,[fe(doctor,Doctor),fe(patient,Patient),fe(type,child)]),
+    frame(medical_conditions,[fe(doctor,Doctor),fe(patient,Patient),fe(aliment,uti)]).

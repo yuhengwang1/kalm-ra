@@ -1,0 +1,35 @@
+frame(people_by_age,[fe(doctor,doc),fe(patient,pat),fe(type,child)]).
+frame(medical_conditions,[fe(doctor,doc),fe(patient,pat),fe(cause,unexplained),fe(aliment,fever)]).
+frame(being_toxic,[fe(doctor,doc),fe(patient,pat)]).
+frame(being_dehydrated,[fe(doctor,doc),fe(patient,pat)]).
+frame(retaining_neg,[fe(doctor,doc),fe(patient,pat),fe(ability,oral_intake)]).
+
+frame(cure,[fe(doctor,Doctor),fe(patient,Patient),fe(therapy,antimicrobial_therapy)]) :-
+    frame(people_by_age,[fe(person,Patient),fe(type,child)]),
+    frame(medical_conditions,[fe(patient,Patient),fe(degree,unexplained),fe(aliment,fever)]),
+    frame(being_toxic,[fe(doctor,Doctor),fe(patient,Patient)]).
+
+frame(cogitation,[fe(doctor,Doctor),fe(patient,Patient),fe(therapy,hospitalization)]) :-
+    frame(people_by_age,[fe(doctor,Doctor),fe(patient,Patient),fe(type,child)]),
+    frame(medical_conditions,[fe(doctor,Doctor),fe(patient,Patient),fe(cause,unexplained),fe(aliment,fever)]),
+    frame(being_toxic,[fe(doctor,Doctor),fe(patient,Patient)]).
+
+frame(cure,[fe(doctor,Doctor),fe(patient,Patient),fe(therapy,antimicrobial_therapy)]) :-
+    frame(people_by_age,[fe(doctor,Doctor),fe(patient,Patient),fe(type,child)]),
+    frame(medical_conditions,[fe(doctor,Doctor),fe(patient,Patient),fe(cause,unexplained),fe(aliment,fever)]),
+    frame(being_dehydrated,[fe(doctor,Doctor),fe(patient,Patient)]).
+
+frame(cogitation,[fe(doctor,Doctor),fe(patient,Patient),fe(therapy,hospitalization)]) :-
+    frame(people_by_age,[fe(doctor,Doctor),fe(patient,Patient),fe(type,child)]),
+    frame(medical_conditions,[fe(doctor,Doctor),fe(patient,Patient),fe(cause,unexplained),fe(aliment,fever)]),
+    frame(being_dehydrated,[fe(doctor,Doctor),fe(patient,Patient)]).
+
+frame(cure,[fe(doctor,Doctor),fe(patient,Patient),fe(therapy,antimicrobial_therapy)]) :-
+    frame(people_by_age,[fe(doctor,Doctor),fe(patient,Patient),fe(type,child)]),
+    frame(medical_conditions,[fe(doctor,Doctor),fe(patient,Patient),fe(cause,unexplained),fe(aliment,fever)]),
+    frame(retaining_neg,[fe(doctor,Doctor),fe(patient,Patient),fe(ability,oral_intake)]).
+
+frame(cogitation,[fe(doctor,Doctor),fe(patient,Patient),fe(therapy,hospitalization)]) :-
+    frame(people_by_age,[fe(doctor,Doctor),fe(patient,Patient),fe(type,child)]),
+    frame(medical_conditions,[fe(doctor,Doctor),fe(patient,Patient),fe(cause,unexplained),fe(aliment,fever)]),
+    frame(retaining_neg,[fe(doctor,Doctor),fe(patient,Patient),fe(ability,oral_intake)]).

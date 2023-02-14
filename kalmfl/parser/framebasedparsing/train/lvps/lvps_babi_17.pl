@@ -1,0 +1,18 @@
+:- dynamic(fn_synonym/3).
+:- index(fn_synonym/3,trie).
+
+fn_synonym(X, _, X).
+lvp(Lexeme,'','Left_of',noun,[pair('Color1',index(1,2),[nsubj,amod],optional),pair('Shape1',index(1,3),[nsubj],required),pair('Color2',index(1,10),[nmod_of,amod],optional),pair('Shape2',index(1,11),[nmod_of],required)]) :- fn_synonym('left','Left_of',Lexeme).
+lvp(Lexeme,'','Right_of',noun,[pair('Color1',index(2,2),[nsubj,amod],optional),pair('Shape1',index(2,3),[nsubj],required),pair('Color2',index(2,10),[nmod_of,amod],optional),pair('Shape2',index(2,11),[nmod_of],required)]) :- fn_synonym('right','Right_of',Lexeme).
+lvp(Lexeme,'','Above',adp,[pair('Color1',index(3,2),[esac,nsubj,amod],optional),pair('Shape1',index(3,3),[esac,nsubj],required),pair('Color2',index(3,7),[esac,amod],optional),pair('Shape2',index(3,8),[esac],required)]) :- fn_synonym('above','Above',Lexeme).
+lvp(Lexeme,'','Below',adp,[pair('Color1',index(4,2),[esac,nsubj,amod],optional),pair('Shape1',index(4,3),[esac,nsubj],required),pair('Color2',index(4,7),[esac,amod],optional),pair('Shape2',index(4,8),[esac],required)]) :- fn_synonym('below','Below',Lexeme).
+lvp(Lexeme,'','Left_of',noun,[pair('Color1',index(5,3),[lbo_to,amod],optional),pair('Shape1',index(5,4),[lbo_to],required),pair('Color2',index(5,10),[nmod_of,amod],optional),pair('Shape2',index(5,11),[nmod_of],required)]) :- fn_synonym('left','Left_of',Lexeme).
+lvp(Lexeme,'','Right_of',noun,[pair('Color1',index(6,3),[lbo_to,amod],optional),pair('Shape1',index(6,4),[lbo_to],required),pair('Color2',index(6,10),[nmod_of,amod],optional),pair('Shape2',index(6,11),[nmod_of],required)]) :- fn_synonym('right','Right_of',Lexeme).
+lvp(Lexeme,'','Above',adp,[pair('Color1',index(7,3),[esac,nsubj,amod],optional),pair('Shape1',index(7,4),[esac,nsubj],required),pair('Color2',index(7,7),[esac,amod],optional),pair('Shape2',index(7,8),[esac],required)]) :- fn_synonym('above','Above',Lexeme).
+lvp(Lexeme,'','Below',adp,[pair('Color1',index(8,3),[esac,nsubj,amod],optional),pair('Shape1',index(8,4),[esac,nsubj],required),pair('Color2',index(8,7),[esac,amod],optional),pair('Shape2',index(8,8),[esac],required)]) :- fn_synonym('below','Below',Lexeme).
+lvp(Lexeme,'','Left_of',noun,[pair('Color1',index(9,5),[nsubj,obl_in],optional),pair('Shape1',index(9,2),[nsubj],required),pair('Color2',index(9,15),[obl_in],optional),pair('Shape2',index(9,12),[nmod_of],required)]) :- fn_synonym('left','Left_of',Lexeme).
+lvp(Lexeme,'','Right_of',noun,[pair('Color1',index(10,5),[nsubj,obl_in],optional),pair('Shape1',index(10,2),[nsubj],required),pair('Color2',index(10,15),[obl_in],optional),pair('Shape2',index(10,12),[nmod_of],required)]) :- fn_synonym('right','Right_of',Lexeme).
+lvp(Lexeme,'','Above',adp,[pair('Color1',index(11,5),[esac,nsubj,obl_in],optional),pair('Shape1',index(11,2),[esac,nsubj],required),pair('Color2',index(11,12),[esac,obl_in],optional),pair('Shape2',index(11,9),[esac],required)]) :- fn_synonym('above','Above',Lexeme).
+lvp(Lexeme,'','Below',adp,[pair('Color1',index(12,5),[esac,nsubj,obl_in],optional),pair('Shape1',index(12,2),[esac,nsubj],required),pair('Color2',index(12,12),[esac,obl_in],optional),pair('Shape2',index(12,9),[esac],required)]) :- fn_synonym('below','Below',Lexeme).
+lvp(Lexeme,'','Above',adp,[pair('Color1',index(13,3),[esac,lbo_above,amod],optional),pair('Shape1',index(13,4),[esac,lbo_above],required),pair('Shape2',index(13,7),[esac],required)]) :- fn_synonym('above','Above',Lexeme).
+lvp(Lexeme,'','Below',adp,[pair('Color1',index(14,3),[esac,lbo_below,amod],optional),pair('Shape1',index(14,4),[esac,lbo_below],required),pair('Shape2',index(14,7),[esac],required)]) :- fn_synonym('below','Below',Lexeme).

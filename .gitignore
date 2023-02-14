@@ -3,3 +3,4 @@
 /log
 **/pkl/
 *.xwam
+.DS_Store

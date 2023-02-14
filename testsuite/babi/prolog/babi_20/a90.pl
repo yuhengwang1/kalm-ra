@@ -1,0 +1,11 @@
+?-answer(2,[kitchen]).
+?-answer(4,[bedroom]).
+?-answer(6,[hungry]).
+?-answer(8,[bedroom]).
+?-answer(10,[kitchen]).
+?-answer(12,[thirsty]).
+?-answer(14,[thirsty]).
+?-answer(16,[hungry]).
+?-answer(18,[tired]).
+?-answer(20,[tired]).
+?-answer(22,[tired]).

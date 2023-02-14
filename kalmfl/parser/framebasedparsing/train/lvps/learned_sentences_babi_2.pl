@@ -1,0 +1,9 @@
+:- dynamic(learned_sentence/6).
+
+learned_sentence('A person goes to a place.',index(1,3),'Travel',[pair('Person',index(1,2),required),pair('Place',index(1,6),required)],['travel','journey','move'],lvp('go','Travel',[pair('Person',index(1,2),[nsubj],required),pair('Place',index(1,6),[obl_to],required)])).
+learned_sentence('Where is the milk?',index(2,1),'Located',[pair('Entity',index(2,4),required),pair('Place',index(2,1),required)],[],lvp('where','Located',[pair('Entity',index(2,4),[nsubj],required),pair('Place',index(2,1),[self],required)])).
+learned_sentence('A person got something.',index(3,3),'Obtain',[pair('Person',index(3,2),required),pair('Theme',index(3,4),required)],['grab','take','pick_up'],lvp('get','Obtain',[pair('Person',index(3,2),[nsubj],required),pair('Theme',index(3,4),[obj],required)])).
+learned_sentence('A person dropped something.',index(4,3),'Discard',[pair('Person',index(4,2),required),pair('Theme',index(4,4),required)],['discard','leave','put_down'],lvp('drop','Discard',[pair('Person',index(4,2),[nsubj],required),pair('Theme',index(4,4),[obj],required)])).
+learned_sentence('A thing is located in a place.',index(5,4),'Located',[pair('Entity',index(5,2),required),pair('Place',index(5,7),required)],[],lvp('locate','Located',[pair('Entity',index(5,2),[obj],required),pair('Place',index(5,7),[obl_in],required)])).
+learned_sentence('A thing is located in a place.',index(5,4),'Located',[pair('Entity',index(5,2),required),pair('Place',index(5,7),required)],[],lvp('located','Located',[pair('Entity',index(5,2),[nsubj],required),pair('Place',index(5,7),[obl_in],required)])).
+learned_sentence('A person holds a thing.',index(6,3),'Hold',[pair('Person',index(6,2),required),pair('Theme',index(6,5),required)],[],lvp('hold','Hold',[pair('Person',index(6,2),[nsubj],required),pair('Theme',index(6,5),[obj],required)])).

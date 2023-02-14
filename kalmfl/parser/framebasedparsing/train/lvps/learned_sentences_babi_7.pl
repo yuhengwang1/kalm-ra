@@ -1,0 +1,7 @@
+:- dynamic(learned_sentence/6).
+
+learned_sentence('A person goes to a place.',index(1,3),'Travel',[pair('Person',index(1,2),required),pair('Place',index(1,6),required)],['travel','journey','move'],lvp('go','Travel',[pair('Person',index(1,2),[nsubj],required),pair('Place',index(1,6),[obl_to],required)])).
+learned_sentence('How many objects a person is carrying?',index(2,7),'Hold',[pair('Person',index(2,5),required),pair('Theme',index(2,1),required)],[],lvp('carry','Hold',[pair('Person',index(2,5),[nsubj],required),pair('Theme',index(2,1),[obj,amod,advmod],required)])).
+learned_sentence('A person got something.',index(3,3),'Obtain',[pair('Person',index(3,2),required),pair('Theme',index(3,4),required)],['grab','take','pick_up'],lvp('get','Obtain',[pair('Person',index(3,2),[nsubj],required),pair('Theme',index(3,4),[obj],required)])).
+learned_sentence('A person dropped something.',index(4,3),'Discard',[pair('Person',index(4,2),required),pair('Theme',index(4,4),required)],['discard','leave','put_down'],lvp('drop','Discard',[pair('Person',index(4,2),[nsubj],required),pair('Theme',index(4,4),[obj],required)])).
+learned_sentence('A person gave something to a person.',index(5,3),'Giving',[pair('Owner',index(5,2),required),pair('Theme',index(5,4),required),pair('Recipient',index(5,7),optional)],['pass','hand'],lvp('give','Giving',[pair('Owner',index(5,2),[nsubj],required),pair('Theme',index(5,4),[obj],required),pair('Recipient',index(5,7),[obl_to],optional)])).

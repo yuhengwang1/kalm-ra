@@ -1,0 +1,71 @@
+happensAt(frame("Located",[fe("Entity",mary),fe("Place",school)]),1).
+happensAt(frame("Located",[fe("Entity",bill),fe("Place",kitchen)]),2).
+happensAt(frame("Travel",[fe("Person",bill),fe("Place",bedroom)]),4).
+happensAt(frame("Travel",[fe("Person",fred),fe("Place",cinema)]),5).
+happensAt(frame("Travel",[fe("Person",fred),fe("Place",park)]),7).
+happensAt(frame("Located",[fe("Entity",bill),fe("Place",school)]),8)
+    v happensAt(frame("Located",[fe("Entity",bill),fe("Place",office)]),8).
+happensAt(frame("Travel",[fe("Person",mary),fe("Place",cinema)]),10).
+happensAt(frame("Located",[fe("Entity",julie),fe("Place",school)]),11)
+    v happensAt(frame("Located",[fe("Entity",julie),fe("Place",office)]),11).
+happensAt(frame("Located",[fe("Entity",julie),fe("Place",park)]),13)
+    v happensAt(frame("Located",[fe("Entity",julie),fe("Place",school)]),13).
+happensAt(frame("Travel",[fe("Person",bill),fe("Place",office)]),14).
+
+% happensAt(frame("Travel",[fe("Person",fred),fe("Place",kitchen)]),1).
+% happensAt(frame("Located",[fe("Entity",bill),fe("Place",office)]),2)
+%     v happensAt(frame("Located",[fe("Entity",bill),fe("Place",school)]),2).
+% happensAt(frame("Travel",[fe("Person",mary),fe("Place",office)]),4).
+% happensAt(frame("Located",[fe("Entity",bill),fe("Place",school)]),5)
+%     v happensAt(frame("Located",[fe("Entity",bill),fe("Place",office)]),5).
+% happensAt(frame("Travel",[fe("Person",julie),fe("Place",cinema)]),7).
+% happensAt(frame("Located",[fe("Entity",julie),fe("Place",park)]),8).
+% happensAt(frame("Located",[fe("Entity",fred),fe("Place",park)]),10).
+% happensAt(frame("Travel",[fe("Person",mary),fe("Place",park)]),11).
+% happensAt(frame("Located",[fe("Entity",bill),fe("Place",kitchen)]),13)
+%     v happensAt(frame("Located",[fe("Entity",bill),fe("Place",park)]),13).
+% happensAt(frame("Travel",[fe("Person",julie),fe("Place",school)]),14).
+
+
+var(bedroom).
+var(cinema).
+var(park).
+var(office).
+var(school).
+var(kitchen).
+var(mary).
+var(bill).
+var(fred).
+var(julie).
+time(1..15).
+
+
+
+initiates(frame("Travel",[fe("Person",Person),fe("Place",Place)]),frame("Located",[fe("Entity",Person),fe("Place",Place)])) :-
+    var(Person), var(Place).
+
+terminates(frame("Travel",[fe("Person",Person),fe("Place",Place)]),frame("Located",[fe("Entity",Person),fe("Place",Place2)])) :-
+    var(Person), var(Place), var(Place2),
+    Place != Place2.
+
+
+initiates(frame("Located",[fe("Entity",Person),fe("Place",Place)]),frame("Located",[fe("Entity",Person),fe("Place",Place)])) :-
+    var(Person), var(Place).
+
+terminates(frame("Located",[fe("Entity",Person),fe("Place",Place)]),frame("Located",[fe("Entity",Person),fe("Place",Place2)])) :-
+    var(Person), var(Place), var(Place2),
+    Place != Place2.
+
+
+
+holdsAt(F,T2) :-
+    happensAt(A,T1), initiates(A,F), time(T2), T1 < T2,
+    not stoppedIn(T1,F,T2).
+
+stoppedIn(T1,F,T2) :- 
+    happensAt(A,T), terminates(A,F), time(T1), T1 < T, time(T2), T < T2.
+
+
+
+
+holdsAt(frame("Located",[fe("Entity",Person),fe("Place",Place)]),15)?

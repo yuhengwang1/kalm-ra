@@ -1,0 +1,13 @@
+frame(cure,[fe(doctor,doc),fe(patient,pat),fe(therapy,antimicrobial)]).
+frame(intentionally_act,[fe(doctor,doc),fe(patient,pat),fe(task,rnc)]).
+
+frame(undergoing,[fe(patient,Patient),fe(doctor,Doctor),fe(therapy,Therapy)]) :-
+    frame(cure,[fe(doctor,Doctor),fe(patient,Patient),fe(therapy,Therapy)]).
+
+frame(completed,[fe(doctor,Doctor),fe(patient,Patient),fe(event,Therapy)]) v 
+frame(completed_neg,[fe(doctor,Doctor),fe(patient,Patient),fe(event,Therapy)]) :-
+    frame(cure,[fe(doctor,Doctor),fe(patient,Patient),fe(therapy,Therapy)]).
+
+frame(completed,[fe(doctor,Doctor),fe(patient,Patient),fe(event,ImagingStudy)]) v 
+frame(completed_neg,[fe(doctor,Doctor),fe(patient,Patient),fe(event,ImagingStudy)]) :-
+    frame(intentionally_act,[fe(doctor,Doctor),fe(patient,Patient),fe(task,ImagingStudy)]).

@@ -1,0 +1,11 @@
+frame(people_by_age,[fe(doctor,doc),fe(patient,pat),fe(type,child)]).
+frame(medical_conditions,[fe(doctor,doc),fe(patient,pat),fe(aliment,uti)]).
+frame(completed,[fe(doctor,doc),fe(patient,pat),fe(event,antimicrobial)]).
+frame(completed_neg,[fe(doctor,doc),fe(patient,pat),fe(event,rnc)]).
+
+frame(cure,[fe(doctor,Doctor),fe(patient,Patient),fe(therapy,antimicrobial),fe(dose,therapeutically)]) v
+frame(cure,[fe(doctor,Doctor),fe(patient,Patient),fe(therapy,antimicrobial),fe(dose,prophylactically)]) :-
+    frame(people_by_age,[fe(doctor,Doctor),fe(patient,Patient),fe(type,child)]),
+    frame(medical_conditions,[fe(doctor,Doctor),fe(patient,Patient),fe(aliment,uti)]),
+    frame(completed,[fe(doctor,Doctor),fe(patient,Patient),fe(event,antimicrobial)]),
+    frame(completed_neg,[fe(doctor,Doctor),fe(patient,Patient),fe(event,rnc)]).

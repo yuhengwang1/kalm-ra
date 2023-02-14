@@ -1,0 +1,21 @@
+frame(people_by_age,[fe(doctor,doc),fe(patient,pat),fe(type,child)]).
+frame(medical_conditions,[fe(doctor,doc),fe(patient,pat),fe(aliment,uti)]).
+frame(undergoing,[fe(patient,pat),fe(doctor,doc),fe(therapy,antimicrobial),fe(duration,2)]).
+
+frame(evaluation,[fe(doctor,Doctor),fe(patient,Patient)]) :-
+    frame(people_by_age,[fe(doctor,Doctor),fe(patient,Patient),fe(type,child)]),
+    frame(medical_conditions,[fe(doctor,Doctor),fe(patient,Patient),fe(aliment,uti)]),
+    frame(undergoing,[fe(patient,Patient),fe(doctor,Doctor),fe(therapy,antimicrobial),fe(duration,2)]),
+    frame(responding_neg,[fe(doctor,Doctor),fe(person,Patient),fe(therapy,antimicrobial)]).
+
+frame(scrutiny,[fe(doctor,Doctor),fe(patient,Patient),fe(culture_specimen,urine)]) :-
+    frame(people_by_age,[fe(doctor,Doctor),fe(patient,Patient),fe(type,child)]),
+    frame(medical_conditions,[fe(doctor,Doctor),fe(patient,Patient),fe(aliment,uti)]),
+    frame(undergoing,[fe(patient,Patient),fe(doctor,Doctor),fe(therapy,antimicrobial),fe(duration,2)]),
+    frame(responding_neg,[fe(doctor,Doctor),fe(person,Patient),fe(therapy,antimicrobial)]).
+
+frame(responding,[fe(doctor,Doctor),fe(person,Patient),fe(therapy,antimicrobial)]) v
+frame(responding_neg,[fe(doctor,Doctor),fe(person,Patient),fe(therapy,antimicrobial)]) :-
+    frame(people_by_age,[fe(doctor,Doctor),fe(patient,Patient),fe(type,child)]),
+    frame(medical_conditions,[fe(doctor,Doctor),fe(patient,Patient),fe(aliment,uti)]),
+    frame(undergoing,[fe(patient,Patient),fe(doctor,Doctor),fe(therapy,antimicrobial),fe(duration,2)]).

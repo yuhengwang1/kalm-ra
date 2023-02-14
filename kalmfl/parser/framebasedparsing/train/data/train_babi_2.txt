@@ -1,0 +1,6 @@
+A person goes to a place.
+Where is the milk?
+A person got something.
+A person dropped something.
+A thing is located in a place.
+A person holds a thing.

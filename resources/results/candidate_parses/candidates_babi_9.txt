@@ -1,0 +1,90 @@
+============================1============================
+Sandra is no longer in the bedroom.
+Located_not = index(1,7) - none
+Entity - sandra - index(1,1) - propn - person - null
+Place - bedroom - index(1,7) - noun - null - null
+
+============================2============================
+John went back to the kitchen.
+Travel = index(2,2) - none
+Person - john - index(2,1) - propn - person - null
+Place - kitchen - index(2,6) - noun - null - null
+
+============================3============================
+Is John in the kitchen?
+Located = index(3,5) - none
+Entity - john - index(3,2) - propn - person - null
+Place - kitchen - index(3,5) - noun - null - null
+
+============================4============================
+John is in the hallway.
+Located = index(4,5) - none
+Entity - john - index(4,1) - propn - person - null
+Place - hallway - index(4,5) - noun - null - null
+
+============================5============================
+Daniel is in the hallway.
+Located = index(5,5) - none
+Entity - daniel - index(5,1) - propn - person - null
+Place - hallway - index(5,5) - noun - null - null
+
+============================6============================
+Is Daniel in the hallway?
+Located = index(6,5) - none
+Entity - daniel - index(6,2) - propn - person - null
+Place - hallway - index(6,5) - noun - null - null
+
+============================7============================
+Daniel is no longer in the hallway.
+Located_not = index(7,7) - none
+Entity - daniel - index(7,1) - propn - person - null
+Place - hallway - index(7,7) - noun - null - null
+
+============================8============================
+John moved to the office.
+Travel = index(8,2) - none
+Person - john - index(8,1) - propn - person - null
+Place - office - index(8,5) - noun - null - null
+
+============================9============================
+Is Daniel in the hallway?
+Located = index(9,5) - none
+Entity - daniel - index(9,2) - propn - person - null
+Place - hallway - index(9,5) - noun - null - null
+
+============================10============================
+John travelled to the bathroom.
+Travel = index(10,2) - none
+Person - john - index(10,1) - propn - person - null
+Place - bathroom - index(10,5) - noun - null - null
+
+============================11============================
+Mary is in the bedroom.
+Located = index(11,5) - none
+Entity - mary - index(11,1) - propn - person - null
+Place - bedroom - index(11,5) - noun - null - null
+
+============================12============================
+Is Daniel in the hallway?
+Located = index(12,5) - none
+Entity - daniel - index(12,2) - propn - person - null
+Place - hallway - index(12,5) - noun - null - null
+
+============================13============================
+Sandra is in the office.
+Located = index(13,5) - none
+Entity - sandra - index(13,1) - propn - person - null
+Place - office - index(13,5) - noun - null - null
+
+============================14============================
+Daniel journeyed to the garden.
+Travel = index(14,2) - none
+Person - daniel - index(14,1) - propn - person - null
+Place - garden - index(14,5) - noun - null - null
+
+============================15============================
+Is Daniel in the hallway?
+Located = index(15,5) - none
+Entity - daniel - index(15,2) - propn - person - null
+Place - hallway - index(15,5) - noun - null - null
+

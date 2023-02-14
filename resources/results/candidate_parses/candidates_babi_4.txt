@@ -1,0 +1,18 @@
+============================1============================
+The garden is west of the hallway.
+West_of = index(1,4) - none
+Entity1 - garden - index(1,2) - noun - null - null
+Entity2 - hallway - index(1,7) - noun - null - null
+
+============================2============================
+The garden is east of the kitchen.
+East_of = index(2,4) - none
+Entity1 - garden - index(2,2) - noun - null - null
+Entity2 - kitchen - index(2,7) - noun - null - null
+
+============================3============================
+What is the kitchen west of?
+West_of = index(3,5) - none
+Entity1 - kitchen - index(3,4) - noun - null - null
+Entity2 - what - index(3,1) - pron - null - null
+

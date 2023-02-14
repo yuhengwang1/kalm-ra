@@ -1,0 +1,7 @@
+A place is north of a place.
+A place is south of a place.
+A place is east of a place.
+A place is west of a place.
+How do you go from the bathroom to the hallway?
+A person travels from the source to the target via a path.
+List2 equals list1 plus an element.

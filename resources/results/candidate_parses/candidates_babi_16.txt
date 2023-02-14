@@ -1,0 +1,60 @@
+============================1============================
+Lily is a rhino.
+Belong_to = index(1,4) - none
+Individual - lily - index(1,1) - propn - person - null
+Type - rhino - index(1,4) - noun - null - null
+
+============================2============================
+Brian is a lion.
+Belong_to = index(2,4) - none
+Individual - brian - index(2,1) - propn - person - null
+Type - lion - index(2,4) - noun - null - null
+
+============================3============================
+Greg is a rhino.
+Belong_to = index(3,4) - none
+Individual - greg - index(3,1) - propn - person - null
+Type - rhino - index(3,4) - noun - null - null
+
+============================4============================
+Bernhard is a swan.
+Belong_to = index(4,4) - none
+Individual - bernhard - index(4,1) - propn - person - null
+Type - swan - index(4,4) - noun - null - null
+
+============================5============================
+Greg is gray.
+Color = index(5,3) - none
+Entity - greg - index(5,1) - propn - person - null
+Color - gray - index(5,3) - adj - null - null
+
+============================6============================
+Brian is yellow.
+Color = index(6,3) - none
+Entity - brian - index(6,1) - propn - person - null
+Color - yellow - index(6,3) - adj - null - null
+
+============================7============================
+Lily is gray.
+Color = index(7,3) - none
+Entity - lily - index(7,1) - propn - person - null
+Color - gray - index(7,3) - adj - null - null
+
+============================8============================
+Julius is a swan.
+Belong_to = index(8,4) - none
+Individual - julius - index(8,1) - propn - person - null
+Type - swan - index(8,4) - noun - null - null
+
+============================9============================
+Julius is yellow.
+Color = index(9,3) - none
+Entity - julius - index(9,1) - propn - person - null
+Color - yellow - index(9,3) - adj - null - null
+
+============================10============================
+What color is Bernhard?
+Color = index(10,2) - none
+Entity - bernhard - index(10,4) - propn - person - null
+Color - what - index(10,1) - det - null - null
+

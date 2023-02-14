@@ -1,0 +1,37 @@
+If $doctor administers $therapy for $patient, then $patient undergoes $therapy from $doctor.
+If $patient undergoes $therapy from $doctor, then $patient's $therapy from $doctor is completed, or not completed.
+If $doctor performs $imaging_study for $patient, then $patient's $imaging_study from $doctor is completed, or not completed.
+
+If $doctor's $patient is a young child and has an unexplained fever, then $doctor must consider UTI for $patient.
+
+If $doctor's $patient is a young child and has an unexplained fever, then $doctor must assess $patient's degree of toxicity.
+If $doctor's $patient is a young child and has an unexplained fever, then $doctor must assess $patient's degree of dehydration.
+If $doctor's $patient is a young child and has an unexplained fever, then $doctor must assess $patient's ability to retain oral intake.
+If $doctor assesses $patient's ability to retain oral intake, then $doctor's $patient is or is not able to retain oral intake.
+
+If $doctor's $patient is a young child and has an unexplained fever, and $doctor's $patient is sufficiently ill, then $doctor should analyze the culture of $patient's urine specimen that is obtained by SPA or transurethral catheterization.
+
+If $doctor's $patient is a young child and has an unexplained fever, and $doctor's $patient is not sufficiently ill, then $doctor should analyze the culture of $patient's urine specimen that is obtained by SPA, transurethral catheterization, or a convenient method.
+If $doctor's $patient is a young child and has an unexplained fever, $doctor's $patient is not sufficiently ill, $doctor analyzes the culture of $patient's urine specimen that is obtained by a convenient method, and the analysis of $patient's culture of a urine specimen suggests UTI, then $doctor should analyze $patient's culture of a urine specimen that is obtained by SPA or transurethral catheterization.
+If $doctor analyzes the culture of $patient's urine specimen that is obtained by SPA or transurethral catheterization, then $doctor's analysis of $patient's culture confirms UTI or excludes UTI.
+If $doctor analyzes the culture of $patient's urine specimen that is obtained by a convenient method, then $doctor's analysis of $patient's culture suggests UTI or does not suggest UTI.
+If $doctor's analysis of the culture of $patient's urine specimen confirms UTI, then $doctor's $patient has UTI.
+If $doctor's analysis of the culture of $patient's urine specimen excludes UTI, then $doctor's $patient does not have UTI.
+
+If $doctor's $patient is a young child and has an unexplained fever, and $doctor's $patient is toxic, then $doctor can administer an antimicrobial therapy and consider hospitalization for $patient.
+If $doctor's $patient is a young child and has an unexplained fever, and $doctor's $patient is dehydrated, then $doctor can administer an antimicrobial therapy and consider hospitalization for $patient.
+If $doctor's $patient is a young child and has an unexplained fever, and $doctor's $patient is not able to retain oral intake, then $doctor can administer an antimicrobial therapy and consider hospitalization for $patient.
+
+If $doctor's $patient is a young child, and $doctor's analysis of the culture of $patient's urine specimen confirms UTI, then $doctor should administer a parenteral or oral antimicrobial therapy for $patient.
+
+If $doctor's $patient is a young child and has UTI, $patient undergoes an antimicrobial therapy from $doctor for 2 days, and $doctor's $patient does not show the expected response of the antimicrobial therapy, then $doctor should reevaluate $patient and analyze the culture of $patient's second urine specimen.
+If $doctor's $patient is a young child and has UTI, and $patient undergoes an antimicrobial therapy from $doctor for 2 days, then $doctor's patient shows or does not show the expected response of the antimicrobial therapy.
+
+If $doctor's $patient is a young child and has UTI, then $doctor must administer an oral antimicrobial therapy that lasts at least 7 days and at most 14 days for $patient.
+
+If $doctor's $patient is a young child and has UTI, the antimicrobial therapy of $doctor's $patient is completed, and the imaging study of $doctor's $patient is not completed, then $doctor should administer $patient a therapeutically or prophylactically dosed antimicrobial.
+
+If $doctor's $patient is a young child and has UTI, $patient undergoes an antimicrobial therapy for 2 days from $doctor, and $doctor's $patient does not show the expected response of the antimicrobial therapy, then $doctor can perform ultrasonography promptly for $patient.
+If $doctor's $patient is a young child and has UTI, $patient undergoes an antimicrobial therapy for 2 days from $doctor, and $doctor's $patient does not show the expected response of the antimicrobial therapy, then $doctor can perform VCUG or RNC for $patient.
+If $doctor's $patient is a young child and has UTI, $patient undergoes an antimicrobial therapy for 2 days from $doctor, and $doctor's $patient shows the expected response of the antimicrobial therapy, then $doctor can perform ultrasonography promptly for $patient.
+If $doctor's $patient is a young child and has UTI, $patient undergoes an antimicrobial therapy for 2 days from $doctor, and $doctor's $patient shows the expected response of the antimicrobial therapy, then $doctor can perform VCUG or RNC for $patient.

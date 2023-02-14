@@ -1,0 +1,61 @@
+happensAt(frame("Travel",[fe("Person",john),fe("Place",bedroom)]),2).
+happensAt(frame("Obtain",[fe("Person",john),fe("Theme",football)]),4).
+happensAt(frame("Travel",[fe("Person",john),fe("Place",bathroom)]),5).
+happensAt(frame("Travel",[fe("Person",john),fe("Place",garden)]),7).
+happensAt(frame("Travel",[fe("Person",daniel),fe("Place",hallway)]),8).
+happensAt(frame("Travel",[fe("Person",john),fe("Place",bathroom)]),10).
+happensAt(frame("Travel",[fe("Person",mary),fe("Place",office)]),11).
+happensAt(frame("Travel",[fe("Person",sandra),fe("Place",kitchen)]),12).
+happensAt(frame("Travel",[fe("Person",mary),fe("Place",hallway)]),13).
+happensAt(frame("Travel",[fe("Person",john),fe("Place",bedroom)]),14).
+happensAt(frame("Obtain",[fe("Person",john),fe("Theme",apple)]),15).
+happensAt(frame("Travel",[fe("Person",sandra),fe("Place",bedroom)]),17).
+happensAt(frame("Travel",[fe("Person",sandra),fe("Place",kitchen)]),18).
+
+
+
+var(bedroom).
+var(bathroom).
+var(office).
+var(hallway).
+var(garden).
+var(kitchen).
+var(milk).
+var(football).
+var(apple).
+var(mary).
+var(john).
+var(sandra).
+var(daniel).
+time(1..19).
+
+
+
+initiates(frame("Obtain",[fe("Person",Person),fe("Theme",Thing)]),frame("Hold",[fe("Person",Person),fe("Theme",Thing)])) :-
+    var(Person), var(Place), var(Thing).
+
+terminates(frame("Discard",[fe("Person",Person),fe("Theme",Thing)]),frame("Hold",[fe("Person",Person),fe("Theme",Thing)])) :-
+    var(Person), var(Place), var(Thing).
+
+initiates(frame("Giving",[fe("Owner",Owner),fe("Theme",Thing),fe("Recipient",Recipient)]),frame("Hold",[fe("Person",Recipient),fe("Theme",Thing)])) :-
+    var(Owner), var(Thing), var(Recipient).
+
+terminates(frame("Giving",[fe("Owner",Owner),fe("Theme",Thing),fe("Recipient",Recipient)]),frame("Hold",[fe("Person",Owner),fe("Theme",Thing)])) :-
+    var(Owner), var(Thing), var(Recipient).
+
+
+
+
+holdsAt(F,T2) :-
+    happensAt(A,T1), initiates(A,F), time(T2), T1 < T2,
+    not stoppedIn(T1,F,T2).
+
+stoppedIn(T1,F,T2) :- 
+    happensAt(A,T), terminates(A,F), time(T1), T1 < T, time(T2), T < T2.
+
+
+
+questionedAt(F,T) :-
+	holdsAt(F,T).
+
+questionedAt(frame("Hold",[fe("Person",Person),fe("Theme",Thing)]),T)?

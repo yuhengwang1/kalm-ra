@@ -1,0 +1,126 @@
+============================1============================
+Mary moved to the garden.
+Travel = index(1,2) - none
+Person - mary - index(1,1) - propn - person - null
+Place - garden - index(1,5) - noun - null - null
+
+============================2============================
+Daniel journeyed to the bathroom.
+Travel = index(2,2) - none
+Person - daniel - index(2,1) - propn - person - null
+Place - bathroom - index(2,5) - noun - null - null
+
+============================3============================
+Mary moved to the bathroom.
+Travel = index(3,2) - none
+Person - mary - index(3,1) - propn - person - null
+Place - bathroom - index(3,5) - noun - null - null
+
+============================4============================
+John went to the bathroom.
+Travel = index(4,2) - none
+Person - john - index(4,1) - propn - person - null
+Place - bathroom - index(4,5) - noun - null - null
+
+============================5============================
+Sandra moved to the bedroom.
+Travel = index(5,2) - none
+Person - sandra - index(5,1) - propn - person - null
+Place - bedroom - index(5,5) - noun - null - null
+
+============================6============================
+Daniel travelled to the hallway.
+Travel = index(6,2) - none
+Person - daniel - index(6,1) - propn - person - null
+Place - hallway - index(6,5) - noun - null - null
+
+============================7============================
+John went back to the garden.
+Travel = index(7,2) - none
+Person - john - index(7,1) - propn - person - null
+Place - garden - index(7,6) - noun - null - null
+
+============================8============================
+Daniel picked up the football there.
+Obtain = index(8,2) - none
+Person - daniel - index(8,1) - propn - person - null
+Theme - football - index(8,5) - noun - null - null
+
+============================9============================
+What is Daniel carrying?
+Hold = index(9,4) - none
+Person - daniel - index(9,3) - propn - person - null
+Theme - what - index(9,1) - pron - null - null
+
+============================10============================
+Sandra travelled to the kitchen.
+Travel = index(10,2) - none
+Person - sandra - index(10,1) - propn - person - null
+Place - kitchen - index(10,5) - noun - null - null
+
+============================11============================
+Daniel travelled to the garden.
+Travel = index(11,2) - none
+Person - daniel - index(11,1) - propn - person - null
+Place - garden - index(11,5) - noun - null - null
+
+============================12============================
+What is Daniel carrying?
+Hold = index(12,4) - none
+Person - daniel - index(12,3) - propn - person - null
+Theme - what - index(12,1) - pron - null - null
+
+============================13============================
+Sandra travelled to the hallway.
+Travel = index(13,2) - none
+Person - sandra - index(13,1) - propn - person - null
+Place - hallway - index(13,5) - noun - null - null
+
+============================14============================
+Mary went to the hallway.
+Travel = index(14,2) - none
+Person - mary - index(14,1) - propn - person - null
+Place - hallway - index(14,5) - noun - null - null
+
+============================15============================
+What is Daniel carrying?
+Hold = index(15,4) - none
+Person - daniel - index(15,3) - propn - person - null
+Theme - what - index(15,1) - pron - null - null
+
+============================16============================
+John picked up the milk there.
+Obtain = index(16,2) - none
+Person - john - index(16,1) - propn - person - null
+Theme - milk - index(16,5) - noun - null - null
+
+============================17============================
+Daniel dropped the football.
+Discard = index(17,2) - none
+Person - daniel - index(17,1) - propn - person - null
+Theme - football - index(17,4) - noun - null - null
+
+============================18============================
+What is John carrying?
+Hold = index(18,4) - none
+Person - john - index(18,3) - propn - person - null
+Theme - what - index(18,1) - pron - null - null
+
+============================19============================
+Mary went back to the kitchen.
+Travel = index(19,2) - none
+Person - mary - index(19,1) - propn - person - null
+Place - kitchen - index(19,6) - noun - null - null
+
+============================20============================
+Daniel travelled to the hallway.
+Travel = index(20,2) - none
+Person - daniel - index(20,1) - propn - person - null
+Place - hallway - index(20,5) - noun - null - null
+
+============================21============================
+What is John carrying?
+Hold = index(21,4) - none
+Person - john - index(21,3) - propn - person - null
+Theme - what - index(21,1) - pron - null - null
+

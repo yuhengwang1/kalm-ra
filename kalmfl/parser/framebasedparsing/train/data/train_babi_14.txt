@@ -1,0 +1,7 @@
+A person goes to a place this morning.
+Where is the person before a place?
+A time is before another time.
+A person goes to a place in a period.
+A person is located at a place in a period.
+A person appears in a period before another period.
+A person is located at a place before a place.

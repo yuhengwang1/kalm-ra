@@ -1,0 +1,5 @@
+A person goes to a place.
+How many objects a person is carrying?
+A person got something.
+A person dropped something.
+A person gave something to a person.

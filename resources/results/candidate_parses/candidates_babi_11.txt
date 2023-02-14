@@ -1,0 +1,90 @@
+============================1============================
+Sandra moved to the garden.
+Travel = index(1,2) - none
+Person - sandra - index(1,1) - propn - person - null
+Place - garden - index(1,5) - noun - null - null
+
+============================2============================
+Following that Sandra moved to the kitchen.
+Travel = index(2,4) - none
+Person - sandra - index(2,3) - propn - person - null
+Place - kitchen - index(2,7) - noun - null - null
+
+============================3============================
+Where is Sandra?
+Located = index(3,1) - none
+Entity - sandra - index(3,3) - propn - person - null
+Place - where - index(3,1) - adv - null - null
+
+============================4============================
+John went to the bathroom.
+Travel = index(4,2) - none
+Person - john - index(4,1) - propn - person - null
+Place - bathroom - index(4,5) - noun - null - null
+
+============================5============================
+Afterwards John travelled to the kitchen.
+Travel = index(5,3) - none
+Person - john - index(5,2) - propn - person - null
+Place - kitchen - index(5,6) - noun - null - null
+
+============================6============================
+Where is John?
+Located = index(6,1) - none
+Entity - john - index(6,3) - propn - person - null
+Place - where - index(6,1) - adv - null - null
+
+============================7============================
+Sandra journeyed to the office.
+Travel = index(7,2) - none
+Person - sandra - index(7,1) - propn - person - null
+Place - office - index(7,5) - noun - null - null
+
+============================8============================
+Afterwards Sandra went back to the bedroom.
+Travel = index(8,3) - none
+Person - sandra - index(8,2) - propn - person - null
+Place - bedroom - index(8,7) - noun - null - null
+
+============================9============================
+Where is Sandra?
+Located = index(9,1) - none
+Entity - sandra - index(9,3) - propn - person - null
+Place - where - index(9,1) - adv - null - null
+
+============================10============================
+Mary went back to the hallway.
+Travel = index(10,2) - none
+Person - mary - index(10,1) - propn - person - null
+Place - hallway - index(10,6) - noun - null - null
+
+============================11============================
+After that Mary went to the bathroom.
+Travel = index(11,4) - none
+Person - mary - index(11,3) - propn - person - null
+Place - bathroom - index(11,7) - noun - null - null
+
+============================12============================
+Where is Mary?
+Located = index(12,1) - none
+Entity - mary - index(12,3) - propn - person - null
+Place - where - index(12,1) - adv - null - null
+
+============================13============================
+Daniel went to the bathroom.
+Travel = index(13,2) - none
+Person - daniel - index(13,1) - propn - person - null
+Place - bathroom - index(13,5) - noun - null - null
+
+============================14============================
+After that Daniel journeyed to the garden.
+Travel = index(14,4) - none
+Person - daniel - index(14,3) - propn - person - null
+Place - garden - index(14,7) - noun - null - null
+
+============================15============================
+Where is Daniel?
+Located = index(15,1) - none
+Entity - daniel - index(15,3) - propn - person - null
+Place - where - index(15,1) - adv - null - null
+

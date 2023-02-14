@@ -1,0 +1,96 @@
+happensAt(frame("Feeling",[fe("Person",jason),fe("Feeling",thirsty)]),1).
+happensAt(frame("Feeling",[fe("Person",antoine),fe("Feeling",bored)]),3).
+happensAt(frame("Travel",[fe("Person",jason),fe("Place",kitchen)]),5).
+happensAt(frame("Travel",[fe("Person",antoine),fe("Place",garden)]),7).
+happensAt(frame("Feeling",[fe("Person",sumit),fe("Feeling",hungry)]),9).
+happensAt(frame("Obtain",[fe("Person",antoine),fe("Theme",football)]),11).
+happensAt(frame("Travel",[fe("Person",sumit),fe("Place",kitchen)]),13).
+happensAt(frame("Obtain",[fe("Person",jason),fe("Theme",milk)]),15).
+happensAt(frame("Obtain",[fe("Person",sumit),fe("Theme",apple)]),17).
+happensAt(frame("Feeling",[fe("Person",yann),fe("Feeling",thirsty)]),19).
+happensAt(frame("Travel",[fe("Person",yann),fe("Place",kitchen)]),21).
+
+
+
+var(bedroom).
+var(bathroom).
+var(office).
+var(hallway).
+var(garden).
+var(kitchen).
+var(milk).
+var(football).
+var(apple).
+var(thirsty).
+var(bored).
+var(hungry).
+var(tired).
+var(jason).
+var(antoine).
+var(sumit).
+var(yann).
+time(1..22).
+
+
+
+initiates(frame("Travel",[fe("Person",Person),fe("Place",Place)]),frame("Located",[fe("Entity",Person),fe("Place",Place)])) :-
+    var(Person), var(Place).
+
+terminates(frame("Travel",[fe("Person",Person),fe("Place",Place)]),frame("Located",[fe("Entity",Person),fe("Place",Place2)])) :-
+    var(Person), var(Place), var(Place2),
+    Place != Place2.
+
+
+initiates(frame("Feeling",[fe("Person",Person),fe("Feeling",Feeling)]),frame("Feeling",[fe("Person",Person),fe("Feeling",Feeling)])) :-
+    var(Person), var(Feeling).
+
+terminates(frame("Feeling",[fe("Person",Person),fe("Feeling",Feeling)]),frame("Feeling",[fe("Person",Person),fe("Feeling",Feeling2)])) :- 
+	var(Person), var(Feeling), var(Feeling2),
+    Feeling != Feeling2.
+
+
+initiates(frame("Obtain",[fe("Person",Person),fe("Theme",Thing)]),frame("Hold",[fe("Person",Person),fe("Theme",Thing)])) :-
+    var(Person), var(Thing).
+
+initiates(frame("Obtain",[fe("Person",Person),fe("Theme",Thing)]),frame("Hold",[fe("Person",Person),fe("Theme",Thing2)])) :-
+	var(Person), var(Thing), var(Thing2),
+    Thing != Thing2.
+
+
+
+
+holdsAt(F,T2) :-
+    happensAt(A,T1), initiates(A,F), time(T2), T1 < T2,
+    not stoppedIn(T1,F,T2).
+
+stoppedIn(T1,F,T2) :- 
+    happensAt(A,T), terminates(A,F), time(T1), T1 < T, time(T2), T < T2.
+
+
+
+holdsAt(frame("Travel",[fe("Person",Person),fe("Place",kitchen)]),T) :-
+	holdsAt(frame("Feeling",[fe("Person",Person),fe("Feeling",hungry)]),T).
+
+holdsAt(frame("Travel",[fe("Person",Person),fe("Place",kitchen)]),T) :-
+	holdsAt(frame("Feeling",[fe("Person",Person),fe("Feeling",thirsty)]),T).
+
+holdsAt(frame("Travel",[fe("Person",Person),fe("Place",garden)]),T) :-
+	holdsAt(frame("Feeling",[fe("Person",Person),fe("Feeling",bored)]),T).
+
+holdsAt(frame("Travel",[fe("Person",Person),fe("Place",bedroom)]),T) :-
+	holdsAt(frame("Feeling",[fe("Person",Person),fe("Feeling",tired)]),T).
+
+holdsAt(frame("Travel",[fe("Person",Person),fe("Place",Place),fe("Reason",Why)]),T) :-
+	holdsAt(frame("Located",[fe("Entity",Person),fe("Place",Place)]),T),
+	holdsAt(frame("Feeling",[fe("Person",Person),fe("Feeling",Why)]),T).
+
+holdsAt(frame("Obtain",[fe("Person",Person),fe("Theme",Thing),fe("Reason",Why)]),T) :-
+	holdsAt(frame("Hold",[fe("Person",Person),fe("Theme",Thing)]),T),
+	holdsAt(frame("Feeling",[fe("Person",Person),fe("Feeling",Why)]),T).
+
+
+
+questionedAt(F,T) :-
+	holdsAt(F,T).
+
+questionedAt(frame("Travel",[fe("Person",Person),fe("Place",Place),fe("Reason",Reason)]),T)?

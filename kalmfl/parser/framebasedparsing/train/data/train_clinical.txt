@@ -1,0 +1,33 @@
+A person administers something.
+A person undergoes something for a period.
+
+A person is a young child.
+A person has a severe fever.
+A person considers something.
+
+A person assesses something.
+A person assesses the ability to retain something.
+
+A person is sufficiently ill.
+A person analyzes the person's culture of a urine specimen that is obtained by SPA, transurethral catheterization, or a convenient method.
+A person analyzes the person's culture of a urine specimen.
+A person's culture of a urine specimen is obtained by a method.
+The analysis of the person's culture of urine specimen suggests something.
+The analysis of the person's culture of urine specimen confirms something.
+The analysis of the person's culture of urine specimen excludes something.
+
+A person is toxic.
+A person is dehydrated.
+A person is able to retain something.
+
+A person administers a parenteral or oral antimicrobial therapy.
+
+A person shows a response of a therapy.
+A person reevaluates another person.
+
+A person administers an oral antimicrobial therapy that lasts at least 1 day.
+A person administers an oral antimicrobial therapy that lasts at most 1 day.
+
+The therapy of the patient is completed.
+
+A person performs something or another thing promptly.

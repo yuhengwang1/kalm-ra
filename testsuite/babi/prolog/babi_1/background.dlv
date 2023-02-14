@@ -1,0 +1,62 @@
+happensAt(frame("Travel",[fe("Person",john),fe("Place",hallway)]),1).
+happensAt(frame("Travel",[fe("Person",mary),fe("Place",bathroom)]),2).
+happensAt(frame("Travel",[fe("Person",daniel),fe("Place",bathroom)]),4).
+happensAt(frame("Travel",[fe("Person",john),fe("Place",bedroom)]),5).
+happensAt(frame("Travel",[fe("Person",john),fe("Place",hallway)]),7).
+happensAt(frame("Travel",[fe("Person",sandra),fe("Place",kitchen)]),8).
+happensAt(frame("Travel",[fe("Person",sandra),fe("Place",hallway)]),10).
+happensAt(frame("Travel",[fe("Person",john),fe("Place",garden)]),11).
+happensAt(frame("Travel",[fe("Person",sandra),fe("Place",bathroom)]),13).
+happensAt(frame("Travel",[fe("Person",sandra),fe("Place",kitchen)]),14).
+
+
+
+var(bedroom).
+var(bathroom).
+var(office).
+var(hallway).
+var(garden).
+var(kitchen).
+var(mary).
+var(john).
+var(sandra).
+var(daniel).
+time(1..15).
+
+
+
+initiates(frame("Travel",[fe("Person",Person),fe("Place",Place)]),frame("Located",[fe("Entity",Person),fe("Place",Place)])) :-
+    var(Person),
+    var(Place).
+
+terminates(frame("Travel",[fe("Person",Person),fe("Place",Place)]),frame("Located",[fe("Entity",Person),fe("Place",Place2)])) :-
+    var(Person),
+    var(Place), var(Place2),
+    Place != Place2.
+
+
+
+holdsAt(F,T2) :-
+    happensAt(A,T1), initiates(A,F), time(T2), T1 < T2,
+    not stoppedIn(T1,F,T2).
+
+stoppedIn(T1,F,T2) :- 
+    happensAt(A,T), terminates(A,F), time(T1), T1 < T, time(T2), T < T2.
+
+
+
+holdsAt(F,T2) :-
+    observedAt(E,T1),
+    initiates(E,F),
+    not stoppedIn(T1,F,T2),
+    T1 < T2, time(T1), time(T2).
+
+stoppedIn(T1,F,T2) :-
+    observedAt(E,T),
+    terminates(E,F),
+    T1 < T, T < T2, time(T), time(T1), time(T2).
+
+
+
+
+holdsAt(frame("Located",[fe("Entity",Person),fe("Place",Place)]),15)?

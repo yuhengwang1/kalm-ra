@@ -1,0 +1,5 @@
+A person goes to a place.
+A person gives something to a person.
+A person got something.
+A person dropped something.
+A person received something from someone.

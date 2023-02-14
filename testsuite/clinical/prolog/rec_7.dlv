@@ -1,0 +1,7 @@
+frame(people_by_age,[fe(doctor,doc),fe(patient,pat),fe(type,child)]).
+frame(confirmation,[fe(doctor,doc),fe(patient,pat),fe(specimen_culture,urine),fe(ailment,uti)]).
+
+frame(cure,[fe(doctor,Doctor),fe(patient,Patient),fe(therapy,parenteral)]) v
+frame(cure,[fe(doctor,Doctor),fe(patient,Patient),fe(therapy,antimicrobial)]) :-
+    frame(people_by_age,[fe(doctor,Doctor),fe(patient,Patient),fe(type,child)]),
+    frame(confirmation,[fe(doctor,Doctor),fe(patient,Patient),fe(specimen_culture,urine),fe(ailment,uti)]).

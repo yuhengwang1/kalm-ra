@@ -1,0 +1,50 @@
+happensAt(frame("Afraid_of",[fe("Entity",wolf),fe("Object",mouse)]),1).
+happensAt(frame("Afraid_of",[fe("Entity",sheep),fe("Object",mouse)]),2).
+happensAt(frame("Belong_to",[fe("Individual",winona),fe("Type",sheep)]),3).
+happensAt(frame("Afraid_of",[fe("Entity",mouse),fe("Object",cat)]),4).
+happensAt(frame("Afraid_of",[fe("Entity",cat),fe("Object",wolf)]),5).
+happensAt(frame("Belong_to",[fe("Individual",jessica),fe("Type",mouse)]),6).
+happensAt(frame("Belong_to",[fe("Individual",emily),fe("Type",cat)]),7).
+happensAt(frame("Belong_to",[fe("Individual",gertrude),fe("Type",wolf)]),8).
+
+
+
+var(wolf).
+var(sheep).
+var(mouse).
+var(cat).
+var(emily).
+var(winona).
+var(jessica).
+var(gertrude).
+time(1..9).
+
+
+
+initiates(frame("Afraid_of",[fe("Entity",Entity),fe("Object",Object)]),frame("Afraid_of",[fe("Entity",Entity),fe("Object",Object)])) :-
+    var(Entity), var(Object).
+
+initiates(frame("Belong_to",[fe("Individual",Individual),fe("Type",Type)]),frame("Belong_to",[fe("Individual",Individual),fe("Type",Type)])) :-
+    var(Individual), var(Type).
+
+
+
+holdsAt(F,T2) :-
+    happensAt(A,T1), initiates(A,F), time(T2), T1 < T2,
+    not stoppedIn(T1,F,T2).
+
+stoppedIn(T1,F,T2) :- 
+    happensAt(A,T), terminates(A,F), time(T1), T1 < T, time(T2), T < T2.
+
+
+
+holdsAt(frame("Afraid_of",[fe("Entity",Individual),fe("Object",Type2)]),T) :-
+	holdsAt(frame("Belong_to",[fe("Individual",Individual),fe("Type",Type)]),T),
+	holdsAt(frame("Afraid_of",[fe("Entity",Type),fe("Object",Type2)]),T).
+
+
+
+questionedAt(F,T) :-
+	holdsAt(F,T).
+
+questionedAt(frame("Afraid_of",[fe("Entity",Entity),fe("Object",Object)]),T)?

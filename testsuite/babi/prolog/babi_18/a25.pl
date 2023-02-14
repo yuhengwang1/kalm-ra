@@ -1,0 +1,9 @@
+?-answer(11,[no]).
+?-answer(12,[no]).
+?-answer(13,[no]).
+?-answer(14,[no]).
+?-answer(20,[no]).
+?-answer(21,[no]).
+?-answer(22,[no]).
+?-answer(23,[no]).
+?-answer(24,[no]).

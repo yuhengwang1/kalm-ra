@@ -1,0 +1,37 @@
+============================1============================
+The bathroom is west of the hallway.
+West_of = index(1,4) - none
+Entity1 - bathroom - index(1,2) - noun - null - null
+Entity2 - hallway - index(1,7) - noun - null - null
+
+============================2============================
+The garden is east of the kitchen.
+East_of = index(2,4) - none
+Entity1 - garden - index(2,2) - noun - null - null
+Entity2 - kitchen - index(2,7) - noun - null - null
+
+============================3============================
+The office is west of the kitchen.
+West_of = index(3,4) - none
+Entity1 - office - index(3,2) - noun - null - null
+Entity2 - kitchen - index(3,7) - noun - null - null
+
+============================4============================
+The bedroom is north of the garden.
+North_of = index(4,4) - none
+Entity1 - bedroom - index(4,2) - noun - null - null
+Entity2 - garden - index(4,7) - noun - null - null
+
+============================5============================
+The kitchen is north of the hallway.
+North_of = index(5,4) - none
+Entity1 - kitchen - index(5,2) - noun - null - null
+Entity2 - hallway - index(5,7) - noun - null - null
+
+============================6============================
+How do you go from the garden to the hallway?
+Route = index(6,4) - none
+Source - garden - index(6,7) - noun - null - null
+Target - hallway - index(6,10) - noun - null - null
+Path - how - index(6,1) - adv - null - null
+

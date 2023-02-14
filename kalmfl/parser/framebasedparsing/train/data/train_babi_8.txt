@@ -1,0 +1,7 @@
+A person goes to a place.
+What is it carrying?
+A person got something.
+A person dropped something.
+A person holds something.
+List2 equals list1 plus an element.
+List2 equals list1 minus an element.

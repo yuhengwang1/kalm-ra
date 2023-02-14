@@ -1,0 +1,91 @@
+============================1============================
+Julie journeyed to the kitchen this morning.
+Travel = index(1,2) - none
+Person - julie - index(1,1) - propn - person - null
+Place - kitchen - index(1,5) - noun - null - null
+Period - morning - index(1,7) - noun - time - null
+
+============================2============================
+Julie went back to the school yesterday.
+Travel = index(2,2) - none
+Person - julie - index(2,1) - propn - person - null
+Place - school - index(2,6) - noun - null - null
+Period - yesterday - index(2,7) - noun - date - null
+
+============================3============================
+Bill journeyed to the kitchen yesterday.
+Travel = index(3,2) - none
+Person - bill - index(3,1) - propn - person - null
+Place - kitchen - index(3,5) - noun - null - null
+Period - yesterday - index(3,6) - noun - date - null
+
+============================4============================
+Yesterday Fred journeyed to the office.
+Travel = index(4,3) - none
+Person - fred - index(4,2) - propn - person - null
+Place - office - index(4,6) - noun - null - null
+Period - yesterday - index(4,1) - noun - date - null
+
+============================5============================
+Julie went back to the park this afternoon.
+Travel = index(5,2) - none
+Person - julie - index(5,1) - propn - person - null
+Place - park - index(5,6) - noun - null - null
+Period - afternoon - index(5,8) - noun - time - null
+
+============================6============================
+This morning Fred went back to the park.
+Travel = index(6,4) - none
+Person - fred - index(6,3) - propn - person - null
+Place - park - index(6,8) - noun - null - null
+Period - morning - index(6,2) - noun - time - null
+
+============================7============================
+Julie went to the cinema this evening.
+Travel = index(7,2) - none
+Person - julie - index(7,1) - propn - person - null
+Place - cinema - index(7,5) - noun - null - null
+Period - evening - index(7,7) - noun - null - null
+
+============================8============================
+Bill moved to the school this morning.
+Travel = index(8,2) - none
+Person - bill - index(8,1) - propn - person - null
+Place - school - index(8,5) - noun - null - null
+Period - morning - index(8,7) - noun - time - null
+
+============================9============================
+Mary journeyed to the kitchen yesterday.
+Travel = index(9,2) - none
+Person - mary - index(9,1) - propn - person - null
+Place - kitchen - index(9,5) - noun - null - null
+Period - yesterday - index(9,6) - noun - date - null
+
+============================10============================
+Fred went to the office this afternoon.
+Travel = index(10,2) - none
+Person - fred - index(10,1) - propn - person - null
+Place - office - index(10,5) - noun - null - null
+Period - afternoon - index(10,7) - noun - time - null
+
+============================11============================
+Fred went to the park this evening.
+Travel = index(11,2) - none
+Person - fred - index(11,1) - propn - person - null
+Place - park - index(11,5) - noun - null - null
+Period - evening - index(11,7) - noun - time - null
+
+============================12============================
+This morning Mary went back to the park.
+Travel = index(12,4) - none
+Person - mary - index(12,3) - propn - person - null
+Place - park - index(12,8) - noun - null - null
+Period - morning - index(12,2) - noun - time - null
+
+============================13============================
+Where was Fred before the office?
+Located = index(13,1) - none
+Entity - fred - index(13,3) - propn - person - null
+Place - where - index(13,1) - adv - null - null
+Before_place - office - index(13,6) - noun - null - null
+

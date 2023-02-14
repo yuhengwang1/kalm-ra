@@ -1,0 +1,4 @@
+A person goes to a place.
+Where is the person?
+A person is being talked about.
+A person is located in a place.

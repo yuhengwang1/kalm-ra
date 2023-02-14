@@ -1,0 +1,1200 @@
+...Story 1...
+| ?- | ?- q39: correct
+q42: correct
+q45: correct
+q56: correct
+q59: correct
+...Story 2...
+| ?- | ?- q41: correct
+q60: correct
+q75: correct
+q78: correct
+q93: correct
+...Story 3...
+| ?- | ?- q37: correct
+q40: correct
+q65: correct
+q68: correct
+q71: correct
+...Story 4...
+| ?- | ?- q31: correct
+q34: correct
+q43: correct
+q46: correct
+q53: correct
+...Story 5...
+| ?- | ?- q39: correct
+q42: correct
+q45: correct
+q64: correct
+q79: correct
+...Story 6...
+| ?- | ?- q39: correct
+q74: correct
+q77: correct
+q80: correct
+q83: correct
+...Story 7...
+| ?- | ?- q29: correct
+q32: correct
+q35: correct
+q38: correct
+q41: correct
+...Story 8...
+| ?- | ?- q43: correct
+q48: correct
+q93: correct
+q98: correct
+q101: correct
+...Story 9...
+| ?- | ?- q59: correct
+q62: correct
+q65: correct
+q68: correct
+q125: correct
+...Story 10...
+| ?- | ?- q29: correct
+q32: correct
+q35: correct
+q38: correct
+q67: correct
+...Story 11...
+| ?- | ?- q59: correct
+q62: correct
+q71: correct
+q78: correct
+q81: correct
+...Story 12...
+| ?- | ?- q7: correct
+q18: correct
+q25: correct
+q28: correct
+q31: correct
+...Story 13...
+| ?- | ?- q19: correct
+q22: correct
+q25: correct
+q46: correct
+q49: correct
+...Story 14...
+| ?- | ?- q47: correct
+q50: correct
+q53: correct
+q74: correct
+q89: correct
+...Story 15...
+| ?- | ?- q41: correct
+q50: correct
+q53: correct
+q68: correct
+q153: correct
+...Story 16...
+| ?- | ?- q25: correct
+q32: correct
+q35: correct
+q52: correct
+q55: correct
+...Story 17...
+| ?- | ?- q11: correct
+q14: correct
+q17: correct
+q66: correct
+q69: correct
+...Story 18...
+| ?- | ?- q65: correct
+q72: correct
+q75: correct
+q78: correct
+q89: correct
+...Story 19...
+| ?- | ?- q43: correct
+q46: correct
+q55: correct
+q62: correct
+q95: correct
+...Story 20...
+| ?- | ?- q29: correct
+q34: correct
+q37: correct
+q46: correct
+q49: correct
+...Story 21...
+| ?- | ?- q117: correct
+q120: correct
+q123: correct
+q126: correct
+q143: correct
+...Story 22...
+| ?- | ?- q7: correct
+q20: correct
+q23: correct
+q44: correct
+q47: correct
+...Story 23...
+| ?- | ?- q21: correct
+q24: correct
+q27: correct
+q30: correct
+q43: correct
+...Story 24...
+| ?- | ?- q61: correct
+q64: correct
+q67: correct
+q94: correct
+q97: correct
+...Story 25...
+| ?- | ?- q41: correct
+q68: correct
+q71: correct
+q74: correct
+q101: correct
+...Story 26...
+| ?- | ?- q21: correct
+q28: correct
+q31: correct
+q44: correct
+q47: correct
+...Story 27...
+| ?- | ?- q57: correct
+q62: correct
+q65: correct
+q68: correct
+q71: correct
+...Story 28...
+| ?- | ?- q15: correct
+q18: correct
+q21: correct
+q78: correct
+q81: correct
+...Story 29...
+| ?- | ?- q17: correct
+q20: correct
+q23: correct
+q52: correct
+q55: correct
+...Story 30...
+| ?- | ?- q17: correct
+q46: correct
+q49: correct
+q52: correct
+q57: correct
+...Story 31...
+| ?- | ?- q89: correct
+q114: correct
+q117: correct
+q122: correct
+q125: correct
+...Story 32...
+| ?- | ?- q29: correct
+q32: correct
+q47: correct
+q50: correct
+q61: correct
+...Story 33...
+| ?- | ?- q19: correct
+q22: correct
+q29: correct
+q32: correct
+q35: correct
+...Story 34...
+| ?- | ?- q13: correct
+q16: correct
+q19: correct
+q40: correct
+q43: correct
+...Story 35...
+| ?- | ?- q5: correct
+q10: correct
+q43: correct
+q46: correct
+q49: correct
+...Story 36...
+| ?- | ?- q5: correct
+q14: correct
+q19: correct
+q24: correct
+q39: correct
+...Story 37...
+| ?- | ?- q65: correct
+q90: correct
+q93: correct
+q96: correct
+q119: correct
+...Story 38...
+| ?- | ?- q25: correct
+q32: correct
+q71: correct
+q92: correct
+q105: correct
+...Story 39...
+| ?- | ?- q51: correct
+q72: correct
+q75: correct
+q78: correct
+q81: correct
+...Story 40...
+| ?- | ?- q29: correct
+q50: correct
+q53: correct
+q56: correct
+q97: correct
+...Story 41...
+| ?- | ?- q45: correct
+q50: correct
+q53: correct
+q56: correct
+q121: correct
+...Story 42...
+| ?- | ?- q13: correct
+q20: correct
+q23: correct
+q36: correct
+q39: correct
+...Story 43...
+| ?- | ?- q29: correct
+q46: correct
+q49: correct
+q84: correct
+q103: correct
+...Story 44...
+| ?- | ?- q55: correct
+q76: correct
+q79: correct
+q82: correct
+q127: correct
+...Story 45...
+| ?- | ?- q35: correct
+q38: correct
+q41: correct
+q88: correct
+q91: correct
+...Story 46...
+| ?- | ?- q31: correct
+q34: correct
+q37: correct
+q40: correct
+q43: correct
+...Story 47...
+| ?- | ?- q53: correct
+q56: correct
+q101: correct
+q112: correct
+q115: correct
+...Story 48...
+| ?- | ?- q13: correct
+q16: correct
+q19: correct
+q22: correct
+q29: correct
+...Story 49...
+| ?- | ?- q55: correct
+q58: correct
+q61: correct
+q98: correct
+q101: correct
+...Story 50...
+| ?- | ?- q13: correct
+q16: correct
+q19: correct
+q86: correct
+q89: correct
+...Story 51...
+| ?- | ?- q25: correct
+q28: correct
+q31: correct
+q36: correct
+q47: correct
+...Story 52...
+| ?- | ?- q29: correct
+q34: correct
+q37: correct
+q40: correct
+q43: correct
+...Story 53...
+| ?- | ?- q7: correct
+q14: correct
+q17: correct
+q20: correct
+q73: correct
+...Story 54...
+| ?- | ?- q23: correct
+q50: correct
+q53: correct
+q56: correct
+q69: correct
+...Story 55...
+| ?- | ?- q23: correct
+q26: correct
+q35: correct
+q38: correct
+q129: correct
+...Story 56...
+| ?- | ?- q31: correct
+q34: correct
+q37: correct
+q42: correct
+q45: correct
+...Story 57...
+| ?- | ?- q31: correct
+q34: correct
+q37: correct
+q96: correct
+q99: correct
+...Story 58...
+| ?- | ?- q15: correct
+q28: correct
+q31: correct
+q40: correct
+q43: correct
+...Story 59...
+| ?- | ?- q73: correct
+q116: correct
+q119: correct
+q136: correct
+q149: correct
+...Story 60...
+| ?- | ?- q33: correct
+q36: correct
+q51: correct
+q66: correct
+q69: correct
+...Story 61...
+| ?- | ?- q5: correct
+q8: correct
+q11: correct
+q14: correct
+q55: correct
+...Story 62...
+| ?- | ?- q65: correct
+q72: correct
+q75: correct
+q88: correct
+q101: correct
+...Story 63...
+| ?- | ?- q13: correct
+q16: correct
+q23: correct
+q60: correct
+q63: correct
+...Story 64...
+| ?- | ?- q7: correct
+q10: correct
+q19: correct
+q22: correct
+q123: correct
+...Story 65...
+| ?- | ?- q21: correct
+q72: correct
+q75: correct
+q78: correct
+q81: correct
+...Story 66...
+| ?- | ?- q11: correct
+q14: correct
+q23: correct
+q26: correct
+q29: correct
+...Story 67...
+| ?- | ?- q29: correct
+q34: correct
+q37: correct
+q40: correct
+q43: correct
+...Story 68...
+| ?- | ?- q93: correct
+q96: correct
+q151: correct
+q154: correct
+q157: correct
+...Story 69...
+| ?- | ?- q81: correct
+q84: correct
+q111: correct
+q114: correct
+q117: correct
+...Story 70...
+| ?- | ?- q37: correct
+q50: correct
+q53: correct
+q56: correct
+q83: correct
+...Story 71...
+| ?- | ?- q89: correct
+q124: correct
+q129: correct
+q132: correct
+q153: correct
+...Story 72...
+| ?- | ?- q13: correct
+q16: correct
+q19: correct
+q52: correct
+q69: correct
+...Story 73...
+| ?- | ?- q15: correct
+q88: correct
+q103: correct
+q152: correct
+q179: correct
+...Story 74...
+| ?- | ?- q9: correct
+q18: correct
+q27: correct
+q30: correct
+q33: correct
+...Story 75...
+| ?- | ?- q33: correct
+q36: correct
+q39: correct
+q80: correct
+q99: correct
+...Story 76...
+| ?- | ?- q41: correct
+q44: correct
+q47: correct
+q50: correct
+q81: correct
+...Story 77...
+| ?- | ?- q25: correct
+q44: correct
+q47: correct
+q86: correct
+q119: correct
+...Story 78...
+| ?- | ?- q53: correct
+q62: correct
+q65: correct
+q68: correct
+q83: correct
+...Story 79...
+| ?- | ?- q35: correct
+q52: correct
+q79: correct
+q82: correct
+q85: correct
+...Story 80...
+| ?- | ?- q29: correct
+q38: correct
+q41: correct
+q146: correct
+q151: correct
+...Story 81...
+| ?- | ?- q17: correct
+q34: correct
+q37: correct
+q68: correct
+q87: correct
+...Story 82...
+| ?- | ?- q13: correct
+q38: correct
+q43: correct
+q46: correct
+q49: correct
+...Story 83...
+| ?- | ?- q29: correct
+q40: correct
+q43: correct
+q92: correct
+q105: correct
+...Story 84...
+| ?- | ?- q9: correct
+q12: correct
+q15: correct
+q18: correct
+q73: correct
+...Story 85...
+| ?- | ?- q47: correct
+q50: correct
+q83: correct
+q86: correct
+q91: correct
+...Story 86...
+| ?- | ?- q31: correct
+q70: correct
+q73: correct
+q76: correct
+q79: correct
+...Story 87...
+| ?- | ?- q39: correct
+q42: correct
+q45: correct
+q68: correct
+q73: correct
+...Story 88...
+| ?- | ?- q19: correct
+q22: correct
+q39: correct
+q42: correct
+q55: correct
+...Story 89...
+| ?- | ?- q21: correct
+q24: correct
+q27: correct
+q30: correct
+q59: correct
+...Story 90...
+| ?- | ?- q27: correct
+q30: correct
+q37: correct
+q48: correct
+q51: correct
+...Story 91...
+| ?- | ?- q13: correct
+q18: correct
+q21: correct
+q84: correct
+q119: correct
+...Story 92...
+| ?- | ?- q51: correct
+q76: correct
+q79: correct
+q82: correct
+q85: correct
+...Story 93...
+| ?- | ?- q25: correct
+q28: correct
+q43: correct
+q46: correct
+q53: correct
+...Story 94...
+| ?- | ?- q31: correct
+q38: correct
+q41: correct
+q78: correct
+q81: correct
+...Story 95...
+| ?- | ?- q27: correct
+q30: correct
+q43: correct
+q46: correct
+q49: correct
+...Story 96...
+| ?- | ?- q61: correct
+q64: correct
+q71: correct
+q74: correct
+q77: correct
+...Story 97...
+| ?- | ?- q25: correct
+q28: correct
+q31: correct
+q34: correct
+q43: correct
+...Story 98...
+| ?- | ?- q33: correct
+q36: correct
+q51: correct
+q54: correct
+q57: correct
+...Story 99...
+| ?- | ?- q21: correct
+q30: correct
+q33: correct
+q44: correct
+q47: correct
+...Story 100...
+| ?- | ?- q47: correct
+q52: correct
+q55: correct
+q58: correct
+q105: correct
+...Story 101...
+| ?- | ?- q45: correct
+q48: correct
+q51: correct
+q64: correct
+q67: correct
+...Story 102...
+| ?- | ?- q15: correct
+q20: correct
+q23: correct
+q26: correct
+q63: correct
+...Story 103...
+| ?- | ?- q85: correct
+q90: correct
+q99: correct
+q108: correct
+q111: correct
+...Story 104...
+| ?- | ?- q13: correct
+q46: correct
+q71: correct
+q74: correct
+q77: correct
+...Story 105...
+| ?- | ?- q41: correct
+q44: correct
+q47: correct
+q50: correct
+q59: correct
+...Story 106...
+| ?- | ?- q23: correct
+q28: correct
+q31: correct
+q34: correct
+q69: correct
+...Story 107...
+| ?- | ?- q9: correct
+q20: correct
+q25: correct
+q28: correct
+q33: correct
+...Story 108...
+| ?- | ?- q47: correct
+q50: correct
+q53: correct
+q66: correct
+q69: correct
+...Story 109...
+| ?- | ?- q39: correct
+q50: correct
+q53: correct
+q58: correct
+q61: correct
+...Story 110...
+| ?- | ?- q23: correct
+q60: correct
+q81: correct
+q84: correct
+q91: correct
+...Story 111...
+| ?- | ?- q35: correct
+q42: correct
+q49: correct
+q92: correct
+q95: correct
+...Story 112...
+| ?- | ?- q25: correct
+q36: correct
+q43: correct
+q50: correct
+q53: correct
+...Story 113...
+| ?- | ?- q37: correct
+q40: correct
+q43: correct
+q56: correct
+q59: correct
+...Story 114...
+| ?- | ?- q13: correct
+q16: correct
+q53: correct
+q56: correct
+q59: correct
+...Story 115...
+| ?- | ?- q15: correct
+q18: correct
+q21: correct
+q34: correct
+q37: correct
+...Story 116...
+| ?- | ?- q33: correct
+q36: correct
+q39: correct
+q44: correct
+q47: correct
+...Story 117...
+| ?- | ?- q7: correct
+q10: correct
+q13: correct
+q16: correct
+q37: correct
+...Story 118...
+| ?- | ?- q83: correct
+q88: correct
+q91: correct
+q94: correct
+q109: correct
+...Story 119...
+| ?- | ?- q27: correct
+q30: correct
+q39: correct
+q42: correct
+q45: correct
+...Story 120...
+| ?- | ?- q31: correct
+q34: correct
+q41: correct
+q44: correct
+q49: correct
+...Story 121...
+| ?- | ?- q7: correct
+q14: correct
+q21: correct
+q24: correct
+q41: correct
+...Story 122...
+| ?- | ?- q47: correct
+q50: correct
+q53: correct
+q56: correct
+q59: correct
+...Story 123...
+| ?- | ?- q13: correct
+q16: correct
+q59: correct
+q62: correct
+q65: correct
+...Story 124...
+| ?- | ?- q51: correct
+q64: correct
+q67: correct
+q82: correct
+q103: correct
+...Story 125...
+| ?- | ?- q25: correct
+q28: correct
+q31: correct
+q34: correct
+q37: correct
+...Story 126...
+| ?- | ?- q15: correct
+q18: correct
+q29: correct
+q44: correct
+q47: correct
+...Story 127...
+| ?- | ?- q27: correct
+q32: correct
+q35: correct
+q38: correct
+q73: correct
+...Story 128...
+| ?- | ?- q13: correct
+q16: correct
+q19: correct
+q22: correct
+q45: correct
+...Story 129...
+| ?- | ?- q25: correct
+q28: correct
+q31: correct
+q56: correct
+q67: correct
+...Story 130...
+| ?- | ?- q33: correct
+q36: correct
+q49: correct
+q52: correct
+q55: correct
+...Story 131...
+| ?- | ?- q23: correct
+q26: correct
+q39: correct
+q42: correct
+q45: correct
+...Story 132...
+| ?- | ?- q33: correct
+q36: correct
+q89: correct
+q92: correct
+q117: correct
+...Story 133...
+| ?- | ?- q31: correct
+q44: correct
+q47: correct
+q52: correct
+q55: correct
+...Story 134...
+| ?- | ?- q29: correct
+q36: correct
+q39: correct
+q42: correct
+q47: correct
+...Story 135...
+| ?- | ?- q9: correct
+q12: correct
+q33: correct
+q36: correct
+q67: correct
+...Story 136...
+| ?- | ?- q25: correct
+q34: correct
+q47: correct
+q86: correct
+q93: correct
+...Story 137...
+| ?- | ?- q9: correct
+q12: correct
+q21: correct
+q28: correct
+q31: correct
+...Story 138...
+| ?- | ?- q25: correct
+q28: correct
+q31: correct
+q46: correct
+q49: correct
+...Story 139...
+| ?- | ?- q13: correct
+q22: correct
+q39: correct
+q42: correct
+q45: correct
+...Story 140...
+| ?- | ?- q23: correct
+q26: correct
+q59: correct
+q62: correct
+q65: correct
+...Story 141...
+| ?- | ?- q27: correct
+q30: correct
+q33: correct
+q98: correct
+q133: correct
+...Story 142...
+| ?- | ?- q131: correct
+q136: correct
+q139: correct
+q142: correct
+q163: correct
+...Story 143...
+| ?- | ?- q73: correct
+q116: correct
+q119: correct
+q122: correct
+q129: correct
+...Story 144...
+| ?- | ?- q75: correct
+q78: correct
+q81: correct
+q84: correct
+q87: correct
+...Story 145...
+| ?- | ?- q33: correct
+q46: correct
+q59: correct
+q62: correct
+q85: correct
+...Story 146...
+| ?- | ?- q9: correct
+q14: correct
+q17: correct
+q30: correct
+q33: correct
+...Story 147...
+| ?- | ?- q15: correct
+q18: correct
+q39: correct
+q42: correct
+q45: correct
+...Story 148...
+| ?- | ?- q53: correct
+q56: correct
+q59: correct
+q64: correct
+q73: correct
+...Story 149...
+| ?- | ?- q35: correct
+q38: correct
+q41: correct
+q44: correct
+q47: correct
+...Story 150...
+| ?- | ?- q11: correct
+q14: correct
+q17: correct
+q74: correct
+q105: correct
+...Story 151...
+| ?- | ?- q29: correct
+q32: correct
+q49: correct
+q64: correct
+q67: correct
+...Story 152...
+| ?- | ?- q89: correct
+q92: correct
+q95: correct
+q98: correct
+q101: correct
+...Story 153...
+| ?- | ?- q17: correct
+q70: correct
+q93: correct
+q96: correct
+q99: correct
+...Story 154...
+| ?- | ?- q25: correct
+q28: correct
+q81: correct
+q84: correct
+q87: correct
+...Story 155...
+| ?- | ?- q15: correct
+q20: correct
+q23: correct
+q26: correct
+q129: correct
+...Story 156...
+| ?- | ?- q35: correct
+q38: correct
+q103: correct
+q124: correct
+q131: correct
+...Story 157...
+| ?- | ?- q29: correct
+q32: correct
+q45: correct
+q48: correct
+q79: correct
+...Story 158...
+| ?- | ?- q37: correct
+q40: correct
+q85: correct
+q130: correct
+q133: correct
+...Story 159...
+| ?- | ?- q31: correct
+q34: correct
+q37: correct
+q40: correct
+q43: correct
+...Story 160...
+| ?- | ?- q27: correct
+q30: correct
+q33: correct
+q54: correct
+q57: correct
+...Story 161...
+| ?- | ?- q23: correct
+q26: correct
+q29: correct
+q42: correct
+q45: correct
+...Story 162...
+| ?- | ?- q53: correct
+q56: correct
+q67: correct
+q70: correct
+q73: correct
+...Story 163...
+| ?- | ?- q37: correct
+q40: correct
+q103: correct
+q110: correct
+q113: correct
+...Story 164...
+| ?- | ?- q5: correct
+q8: correct
+q11: correct
+q14: correct
+q17: correct
+...Story 165...
+| ?- | ?- q39: correct
+q50: correct
+q53: correct
+q56: correct
+q65: correct
+...Story 166...
+| ?- | ?- q47: correct
+q50: correct
+q61: correct
+q70: correct
+q73: correct
+...Story 167...
+| ?- | ?- q41: correct
+q44: correct
+q47: correct
+q120: correct
+q133: correct
+...Story 168...
+| ?- | ?- q7: correct
+q10: correct
+q13: correct
+q44: correct
+q49: correct
+...Story 169...
+| ?- | ?- q13: correct
+q16: correct
+q19: correct
+q28: correct
+q31: correct
+...Story 170...
+| ?- | ?- q73: correct
+q76: correct
+q107: correct
+q110: correct
+q133: correct
+...Story 171...
+| ?- | ?- q27: correct
+q30: correct
+q33: correct
+q92: correct
+q95: correct
+...Story 172...
+| ?- | ?- q23: correct
+q26: correct
+q47: correct
+q50: correct
+q111: correct
+...Story 173...
+| ?- | ?- q61: correct
+q70: correct
+q73: correct
+q76: correct
+q79: correct
+...Story 174...
+| ?- | ?- q17: correct
+q34: correct
+q37: correct
+q40: correct
+q43: correct
+...Story 175...
+| ?- | ?- q49: correct
+q60: correct
+q73: correct
+q76: correct
+q79: correct
+...Story 176...
+| ?- | ?- q19: correct
+q28: correct
+q31: correct
+q34: correct
+q37: correct
+...Story 177...
+| ?- | ?- q37: correct
+q84: correct
+q87: correct
+q90: correct
+q127: correct
+...Story 178...
+| ?- | ?- q45: correct
+q48: correct
+q55: correct
+q58: correct
+q61: correct
+...Story 179...
+| ?- | ?- q27: correct
+q46: correct
+q49: correct
+q80: correct
+q87: correct
+...Story 180...
+| ?- | ?- q13: correct
+q18: correct
+q21: correct
+q24: correct
+q43: correct
+...Story 181...
+| ?- | ?- q27: correct
+q30: correct
+q121: correct
+q124: correct
+q179: correct
+...Story 182...
+| ?- | ?- q31: correct
+q34: correct
+q37: correct
+q86: correct
+q103: correct
+...Story 183...
+| ?- | ?- q11: correct
+q14: correct
+q17: correct
+q20: correct
+q45: correct
+...Story 184...
+| ?- | ?- q17: correct
+q20: correct
+q49: correct
+q52: correct
+q81: correct
+...Story 185...
+| ?- | ?- q37: correct
+q40: correct
+q43: correct
+q46: correct
+q53: correct
+...Story 186...
+| ?- | ?- q29: correct
+q32: correct
+q87: correct
+q90: correct
+q117: correct
+...Story 187...
+| ?- | ?- q15: correct
+q22: correct
+q25: correct
+q28: correct
+q87: correct
+...Story 188...
+| ?- | ?- q51: correct
+q54: correct
+q95: correct
+q98: correct
+q107: correct
+...Story 189...
+| ?- | ?- q47: correct
+q50: correct
+q53: correct
+q56: correct
+q115: correct
+...Story 190...
+| ?- | ?- q33: correct
+q78: correct
+q81: correct
+q84: correct
+q103: correct
+...Story 191...
+| ?- | ?- q23: correct
+q26: correct
+q51: correct
+q54: correct
+q83: correct
+...Story 192...
+| ?- | ?- q17: correct
+q20: correct
+q23: correct
+q46: correct
+q49: correct
+...Story 193...
+| ?- | ?- q25: correct
+q28: correct
+q31: correct
+q34: correct
+q95: correct
+...Story 194...
+| ?- | ?- q37: correct
+q40: correct
+q55: correct
+q72: correct
+q77: correct
+...Story 195...
+| ?- | ?- q49: correct
+q54: correct
+q57: correct
+q62: correct
+q65: correct
+...Story 196...
+| ?- | ?- q29: correct
+q32: correct
+q35: correct
+q38: correct
+q41: correct
+...Story 197...
+| ?- | ?- q49: correct
+q58: correct
+q61: correct
+q82: correct
+q85: correct
+...Story 198...
+| ?- | ?- q31: correct
+q40: correct
+q43: correct
+q46: correct
+q53: correct
+...Story 199...
+| ?- | ?- q35: correct
+q42: correct
+q203: correct
+q208: correct
+q233: correct
+...Story 200...
+| ?- | ?- q87: correct
+q90: correct
+q111: correct
+q126: correct
+q129: correct

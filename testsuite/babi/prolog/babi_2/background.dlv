@@ -1,0 +1,66 @@
+happensAt(frame("Obtain",[fe("Person",mary),fe("Theme",milk)]),1).
+happensAt(frame("Travel",[fe("Person",john),fe("Place",bedroom)]),2).
+happensAt(frame("Travel",[fe("Person",sandra),fe("Place",kitchen)]),3).
+happensAt(frame("Travel",[fe("Person",mary),fe("Place",hallway)]),4).
+happensAt(frame("Obtain",[fe("Person",john),fe("Theme",football)]),6).
+happensAt(frame("Travel",[fe("Person",john),fe("Place",hallway)]),7).
+happensAt(frame("Discard",[fe("Person",john),fe("Theme",football)]),9).
+happensAt(frame("Travel",[fe("Person",mary),fe("Place",garden)]),10).
+happensAt(frame("Travel",[fe("Person",john),fe("Place",kitchen)]),12).
+happensAt(frame("Travel",[fe("Person",sandra),fe("Place",hallway)]),13).
+happensAt(frame("Travel",[fe("Person",daniel),fe("Place",hallway)]),15).
+happensAt(frame("Discard",[fe("Person",mary),fe("Theme",milk)]),16).
+
+
+
+var(bedroom).
+var(bathroom).
+var(office).
+var(hallway).
+var(garden).
+var(kitchen).
+var(milk).
+var(football).
+var(apple).
+var(mary).
+var(john).
+var(sandra).
+var(daniel).
+time(1..17).
+
+
+
+initiates(frame("Travel",[fe("Person",Person),fe("Place",Place)]),frame("Located",[fe("Entity",Person),fe("Place",Place)])) :-
+    var(Person), var(Place).
+
+terminates(frame("Travel",[fe("Person",Person),fe("Place",Place)]),frame("Located",[fe("Entity",Person),fe("Place",Place2)])) :-
+    var(Person), var(Place), var(Place2),
+    Place != Place2.
+
+
+initiates(frame("Obtain",[fe("Person",Person),fe("Theme",Thing)]),frame("Hold",[fe("Person",Person),fe("Theme",Thing)])) :-
+    var(Person), var(Place), var(Thing).
+
+terminates(frame("Discard",[fe("Person",Person),fe("Theme",Thing)]),frame("Hold",[fe("Person",Person),fe("Theme",Thing)])) :-
+    var(Person), var(Place), var(Thing).
+
+
+
+holdsAt(F,T2) :-
+    happensAt(A,T1), initiates(A,F), time(T2), T1 < T2,
+    not stoppedIn(T1,F,T2).
+
+stoppedIn(T1,F,T2) :- 
+    happensAt(A,T), terminates(A,F), time(T1), T1 < T, time(T2), T < T2.
+
+
+
+holdsAt(frame("Located",[fe("Entity",Thing),fe("Place",Place)]),T) :-
+	holdsAt(frame("Hold",[fe("Person",Person),fe("Theme",Thing)]),T),
+	holdsAt(frame("Located",[fe("Entity",Person),fe("Place",Place)]),T).
+
+
+questionedAt(F,T) :-
+	holdsAt(F,T).
+
+questionedAt(frame("Located",[fe("Entity",Thing),fe("Place",Place)]),T)?

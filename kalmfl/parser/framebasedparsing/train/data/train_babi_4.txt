@@ -1,0 +1,16 @@
+A place is north of a place.
+A place is south of a place.
+A place is east of a place.
+A place is west of a place.
+What is the location north of?
+What is the location south of?
+What is the location east of?
+What is the location west of?
+What is the kitchen north of?
+What is the kitchen south of?
+What is the kitchen east of?
+What is the kitchen west of?
+What is the office west of?
+What is north of the garden?
+What is south of the garden?
+What is west of the garden?

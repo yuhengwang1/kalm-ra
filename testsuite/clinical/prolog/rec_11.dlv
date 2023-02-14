@@ -1,0 +1,31 @@
+frame(people_by_age,[fe(doctor,doc),fe(patient,pat),fe(type,child)]).
+frame(medical_conditions,[fe(doctor,doc),fe(patient,pat),fe(aliment,uti)]).
+frame(undergoing,[fe(patient,pat),fe(doctor,doc),fe(therapy,antimicrobial),fe(duration,2)]).
+frame(responding,[fe(doctor,doc),fe(patient,pat),fe(therapy,antimicrobial)]) v 
+    frame(responding_neg,[fe(doctor,doc),fe(patient,pat),fe(therapy,antimicrobial)]).
+
+frame(cure,[fe(doctor,Doctor),fe(patient,Patient),fe(therapy,ultrasonography)]) :-
+    frame(people_by_age,[fe(doctor,Doctor),fe(patient,Patient),fe(type,child)]),
+    frame(medical_conditions,[fe(doctor,Doctor),fe(patient,Patient),fe(aliment,uti)]),
+    frame(undergoing,[fe(patient,Patient),fe(doctor,Doctor),fe(therapy,antimicrobial),fe(duration,2)]),
+    frame(responding_neg,[fe(doctor,Doctor),fe(patient,Patient),fe(therapy,antimicrobial)]).
+
+frame(cure,[fe(doctor,Doctor),fe(patient,Patient),fe(therapy,vcug)]) v
+frame(cure,[fe(doctor,Doctor),fe(patient,Patient),fe(therapy,rnc)]) :-
+    frame(people_by_age,[fe(doctor,Doctor),fe(patient,Patient),fe(type,child)]),
+    frame(medical_conditions,[fe(doctor,Doctor),fe(patient,Patient),fe(aliment,uti)]),
+    frame(undergoing,[fe(patient,Patient),fe(doctor,Doctor),fe(therapy,antimicrobial),fe(duration,2)]),
+    frame(responding_neg,[fe(doctor,Doctor),fe(patient,Patient),fe(therapy,antimicrobial)]).
+
+frame(cure,[fe(doctor,Doctor),fe(patient,Patient),fe(therapy,ultrasonography)]) :-
+    frame(people_by_age,[fe(doctor,Doctor),fe(patient,Patient),fe(type,child)]),
+    frame(medical_conditions,[fe(doctor,Doctor),fe(patient,Patient),fe(aliment,uti)]),
+    frame(undergoing,[fe(patient,Patient),fe(doctor,Doctor),fe(therapy,antimicrobial),fe(duration,2)]),
+    frame(responding,[fe(doctor,Doctor),fe(patient,Patient),fe(therapy,antimicrobial)]).
+
+frame(cure,[fe(doctor,Doctor),fe(patient,Patient),fe(therapy,vcug)]) v
+frame(cure,[fe(doctor,Doctor),fe(patient,Patient),fe(therapy,rnc)]) :-
+    frame(people_by_age,[fe(doctor,Doctor),fe(patient,Patient),fe(type,child)]),
+    frame(medical_conditions,[fe(doctor,Doctor),fe(patient,Patient),fe(aliment,uti)]),
+    frame(undergoing,[fe(patient,Patient),fe(doctor,Doctor),fe(therapy,antimicrobial),fe(duration,2)]),
+    frame(responding,[fe(doctor,Doctor),fe(patient,Patient),fe(therapy,antimicrobial)]).

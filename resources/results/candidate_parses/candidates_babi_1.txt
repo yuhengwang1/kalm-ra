@@ -1,0 +1,90 @@
+============================1============================
+Sandra moved to the kitchen.
+Travel = index(1,2) - none
+Person - sandra - index(1,1) - propn - person - null
+Place - kitchen - index(1,5) - noun - null - null
+
+============================2============================
+John travelled to the kitchen.
+Travel = index(2,2) - none
+Person - john - index(2,1) - propn - person - null
+Place - kitchen - index(2,5) - noun - null - null
+
+============================3============================
+Where is John?
+Located = index(3,1) - none
+Entity - john - index(3,3) - propn - person - null
+Place - where - index(3,1) - adv - null - null
+
+============================4============================
+Sandra moved to the hallway.
+Travel = index(4,2) - none
+Person - sandra - index(4,1) - propn - person - null
+Place - hallway - index(4,5) - noun - null - null
+
+============================5============================
+Daniel journeyed to the hallway.
+Travel = index(5,2) - none
+Person - daniel - index(5,1) - propn - person - null
+Place - hallway - index(5,5) - noun - null - null
+
+============================6============================
+Where is Sandra?
+Located = index(6,1) - none
+Entity - sandra - index(6,3) - propn - person - null
+Place - where - index(6,1) - adv - null - null
+
+============================7============================
+Sandra travelled to the office.
+Travel = index(7,2) - none
+Person - sandra - index(7,1) - propn - person - null
+Place - office - index(7,5) - noun - null - null
+
+============================8============================
+John moved to the bedroom.
+Travel = index(8,2) - none
+Person - john - index(8,1) - propn - person - null
+Place - bedroom - index(8,5) - noun - null - null
+
+============================9============================
+Where is Sandra?
+Located = index(9,1) - none
+Entity - sandra - index(9,3) - propn - person - null
+Place - where - index(9,1) - adv - null - null
+
+============================10============================
+Sandra went back to the garden.
+Travel = index(10,2) - none
+Person - sandra - index(10,1) - propn - person - null
+Place - garden - index(10,6) - noun - null - null
+
+============================11============================
+Sandra travelled to the bathroom.
+Travel = index(11,2) - none
+Person - sandra - index(11,1) - propn - person - null
+Place - bathroom - index(11,5) - noun - null - null
+
+============================12============================
+Where is Sandra?
+Located = index(12,1) - none
+Entity - sandra - index(12,3) - propn - person - null
+Place - where - index(12,1) - adv - null - null
+
+============================13============================
+Sandra moved to the office.
+Travel = index(13,2) - none
+Person - sandra - index(13,1) - propn - person - null
+Place - office - index(13,5) - noun - null - null
+
+============================14============================
+Daniel journeyed to the garden.
+Travel = index(14,2) - none
+Person - daniel - index(14,1) - propn - person - null
+Place - garden - index(14,5) - noun - null - null
+
+============================15============================
+Where is John?
+Located = index(15,1) - none
+Entity - john - index(15,3) - propn - person - null
+Place - where - index(15,1) - adv - null - null
+

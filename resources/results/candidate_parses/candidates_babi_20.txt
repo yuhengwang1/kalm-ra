@@ -1,0 +1,88 @@
+============================1============================
+Yann is hungry.
+Feeling = index(1,3) - none
+Person - yann - index(1,1) - propn - person - null
+Feeling - hungry - index(1,3) - adj - null - null
+
+============================2============================
+Where will yann go?
+Travel = index(2,1) - none
+Person - yann - index(2,3) - propn - null - null
+Place - where - index(2,1) - adv - null - null
+
+============================3============================
+Jason is tired.
+Feeling = index(3,3) - none
+Person - jason - index(3,1) - propn - person - null
+Feeling - tired - index(3,3) - adj - null - null
+
+============================4============================
+Where will jason go?
+Travel = index(4,1) - none
+Person - jason - index(4,3) - propn - null - null
+Place - where - index(4,1) - adv - null - null
+
+============================5============================
+Jason travelled to the bedroom.
+Travel = index(5,2) - none
+Person - jason - index(5,1) - propn - person - null
+Place - bedroom - index(5,5) - noun - null - null
+
+============================6============================
+Why did jason go to the bedroom?
+Travel = index(6,4) - none
+Person - jason - index(6,3) - propn - null - null
+Place - bedroom - index(6,7) - noun - null - null
+Reason - why - index(6,1) - adv - null - null
+
+============================7============================
+Yann travelled to the kitchen.
+Travel = index(7,2) - none
+Person - yann - index(7,1) - propn - person - null
+Place - kitchen - index(7,5) - noun - null - null
+
+============================8============================
+Why did yann go to the kitchen?
+Travel = index(8,4) - none
+Person - yann - index(8,3) - propn - null - null
+Place - kitchen - index(8,7) - noun - null - null
+Reason - why - index(8,1) - adv - null - null
+
+============================9============================
+Sumit is bored.
+Feeling = index(9,3) - none
+Person - sumit - index(9,1) - propn - person - null
+Feeling - bored - index(9,3) - adj - null - null
+
+============================10============================
+Where will sumit go?
+Travel = index(10,1) - none
+Person - sumit - index(10,3) - pron - null - null
+Place - where - index(10,1) - adv - null - null
+
+============================11============================
+Yann took the apple there.
+Obtain = index(11,2) - none
+Person - yann - index(11,1) - propn - person - null
+Theme - apple - index(11,4) - noun - null - null
+
+============================12============================
+Why did yann get the apple?
+Obtain = index(12,4) - none
+Person - yann - index(12,3) - propn - null - null
+Theme - apple - index(12,6) - noun - null - null
+Reason - why - index(12,1) - adv - null - null
+
+============================13============================
+Sumit travelled to the garden.
+Travel = index(13,2) - none
+Person - sumit - index(13,1) - propn - person - null
+Place - garden - index(13,5) - noun - null - null
+
+============================14============================
+Why did sumit go to the garden?
+Travel = index(14,4) - none
+Person - sumit - index(14,3) - pron - null - null
+Place - garden - index(14,7) - noun - null - null
+Reason - why - index(14,1) - adv - null - null
+

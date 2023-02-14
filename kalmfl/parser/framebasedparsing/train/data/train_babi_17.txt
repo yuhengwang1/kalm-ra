@@ -1,0 +1,14 @@
+The red entity is to the left of the green entity.
+The red entity is to the right of the green entity.
+The red entity is above the green entity.
+The red entity is below the green entity.
+Is the red entity to the left of the green entity?
+Is the red entity to the right of the green entity?
+Is the red entity above the green entity?
+Is the red entity below the green entity?
+A shape in a color is to the left of another shape in another color.
+A shape in a color is to the right of another shape in another color.
+A shape in a color is above another shape in another color.
+A shape in a color is below another shape in another color.
+Is the red sphere above the triangle?
+Is the red sphere below the triangle?

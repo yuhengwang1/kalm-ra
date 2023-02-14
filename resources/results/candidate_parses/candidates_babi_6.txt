@@ -1,0 +1,90 @@
+============================1============================
+Mary moved to the kitchen.
+Travel = index(1,2) - none
+Person - mary - index(1,1) - propn - person - null
+Place - kitchen - index(1,5) - noun - null - null
+
+============================2============================
+Mary travelled to the office.
+Travel = index(2,2) - none
+Person - mary - index(2,1) - propn - person - null
+Place - office - index(2,5) - noun - null - null
+
+============================3============================
+Is Mary in the bedroom?
+Located = index(3,3) - none
+Entity - mary - index(3,2) - propn - person - null
+Place - bedroom - index(3,5) - noun - null - null
+
+============================4============================
+Daniel picked up the milk there.
+Obtain = index(4,2) - none
+Person - daniel - index(4,1) - propn - person - null
+Theme - milk - index(4,5) - noun - null - null
+
+============================5============================
+Sandra went to the garden.
+Travel = index(5,2) - none
+Person - sandra - index(5,1) - propn - person - null
+Place - garden - index(5,5) - noun - null - null
+
+============================6============================
+Is Sandra in the kitchen?
+Located = index(6,3) - none
+Entity - sandra - index(6,2) - propn - person - null
+Place - kitchen - index(6,5) - noun - null - null
+
+============================7============================
+Sandra grabbed the apple there.
+Obtain = index(7,2) - none
+Person - sandra - index(7,1) - propn - person - null
+Theme - apple - index(7,4) - noun - null - null
+
+============================8============================
+Sandra dropped the apple.
+Discard = index(8,2) - none
+Person - sandra - index(8,1) - propn - person - null
+Theme - apple - index(8,4) - noun - null - null
+
+============================9============================
+Is Mary in the bedroom?
+Located = index(9,3) - none
+Entity - mary - index(9,2) - propn - person - null
+Place - bedroom - index(9,5) - noun - null - null
+
+============================10============================
+Daniel dropped the milk.
+Discard = index(10,2) - none
+Person - daniel - index(10,1) - propn - person - null
+Theme - milk - index(10,4) - noun - null - null
+
+============================11============================
+Mary went to the garden.
+Travel = index(11,2) - none
+Person - mary - index(11,1) - propn - person - null
+Place - garden - index(11,5) - noun - null - null
+
+============================12============================
+Is Sandra in the garden?
+Located = index(12,3) - none
+Entity - sandra - index(12,2) - propn - person - null
+Place - garden - index(12,5) - noun - null - null
+
+============================13============================
+Daniel took the milk there.
+Obtain = index(13,2) - none
+Person - daniel - index(13,1) - propn - person - null
+Theme - milk - index(13,4) - noun - null - null
+
+============================14============================
+Mary picked up the apple there.
+Obtain = index(14,2) - none
+Person - mary - index(14,1) - propn - person - null
+Theme - apple - index(14,5) - noun - null - null
+
+============================15============================
+Is Mary in the garden?
+Located = index(15,3) - none
+Entity - mary - index(15,2) - propn - person - null
+Place - garden - index(15,5) - noun - null - null
+

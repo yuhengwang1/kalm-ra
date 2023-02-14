@@ -1,0 +1,36 @@
+frame(people_by_age,[fe(doctor,doc),fe(patient,pat),fe(type,child)]).
+frame(medical_conditions,[fe(doctor,doc),fe(patient,pat),fe(cause,unexplained),fe(aliment,fever)]).
+frame(medical_conditions,[fe(doctor,doc),fe(patient,pat),fe(degree,sufficiently)]).
+
+frame(scrutiny,[fe(doctor,Doctor),fe(patient,Patient),fe(specimen_culture,urine),fe(method,spa)]) v
+frame(scrutiny,[fe(doctor,Doctor),fe(patient,Patient),fe(specimen_culture,urine),fe(method,transurethral_catheterization)]) v 
+frame(scrutiny,[fe(doctor,Doctor),fe(patient,Patient),fe(specimen_culture,urine),fe(method,convenient)]) :-
+    frame(people_by_age,[fe(doctor,Doctor),fe(patient,Patient),fe(type,child)]),
+    frame(medical_conditions,[fe(doctor,Doctor),fe(patient,Patient),fe(cause,unexplained),fe(aliment,fever)]),
+    frame(medical_conditions,[fe(doctor,Doctor),fe(patient,Patient),fe(degree,sufficiently)]).
+
+frame(scrutiny,[fe(doctor,Doctor),fe(patient,Patient),fe(specimen_culture,urine),fe(method,spa)]) v
+frame(scrutiny,[fe(doctor,Doctor),fe(patient,Patient),fe(specimen_culture,urine),fe(method,transurethral_catheterization)]) :-
+    frame(people_by_age,[fe(doctor,Doctor),fe(patient,Patient),fe(type,child)]),
+    frame(medical_conditions,[fe(doctor,Doctor),fe(patient,Patient),fe(cause,unexplained),fe(aliment,fever)]),
+    frame(medical_conditions_neg,[fe(doctor,Doctor),fe(patient,Patient),fe(degree,sufficiently)]),
+    frame(scrutiny,[fe(doctor,Doctor),fe(patient,Patient),fe(specimen_culture,urine),fe(method,convenient)]),
+    frame(suggestion,[fe(doctor,Doctor),fe(patient,Patient),fe(specimen_culture,urine),fe(ailment,uti)]).
+
+frame(confirmation,[fe(doctor,Doctor),fe(patient,Patient),fe(specimen_culture,urine),fe(ailment,uti)]) v 
+frame(exclusion,[fe(doctor,Doctor),fe(patient,Patient),fe(specimen_culture,urine),fe(ailment,uti)]) :-
+    frame(scrutiny,[fe(doctor,Doctor),fe(patient,Patient),fe(specimen_culture,urine),fe(method,spa)]).
+
+frame(confirmation,[fe(doctor,Doctor),fe(patient,Patient),fe(specimen_culture,urine),fe(ailment,uti)]) v 
+frame(exclusion,[fe(doctor,Doctor),fe(patient,Patient),fe(specimen_culture,urine),fe(ailment,uti)]) :-
+    frame(scrutiny,[fe(doctor,Doctor),fe(patient,Patient),fe(specimen_culture,urine),fe(method,transurethral_catheterization)]).
+
+frame(suggestion,[fe(doctor,Doctor),fe(patient,Patient),fe(specimen_culture,urine),fe(ailment,uti)]) v
+frame(suggestion_neg,[fe(doctor,Doctor),fe(patient,Patient),fe(specimen_culture,urine),fe(ailment,uti)]) :-
+    frame(scrutiny,[fe(doctor,Doctor),fe(patient,Patient),fe(specimen_culture,urine),fe(method,convenient)]).
+
+frame(medical_conditions,[fe(doctor,Doctor),fe(patient,Patient),fe(aliment,uti)]) :-
+    frame(confirmation,[fe(doctor,Doctor),fe(patient,Patient),fe(specimen_culture,urine),fe(ailment,uti)]).
+
+frame(medical_conditions_neg,[fe(doctor,Doctor),fe(patient,Patient),fe(aliment,uti)]) :-
+    frame(exclusion,[fe(doctor,Doctor),fe(patient,Patient),fe(specimen_culture,urine),fe(ailment,uti)]).

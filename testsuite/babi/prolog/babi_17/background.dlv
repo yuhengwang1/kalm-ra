@@ -1,0 +1,181 @@
+happensAt(frame("Below",[fe("Color1",red),fe("Shape1",square),fe("Color2",none),fe("Shape2",triangle)]),1).
+happensAt(frame("Left_of",[fe("Color1",pink),fe("Shape1",rectangle),fe("Color2",red),fe("Shape2",square)]),2).
+
+
+
+var(pink).
+var(red).
+var(blue).
+var(none).
+var(yellow).
+var(square).
+var(rectangle).
+var(triangle).
+var(sphere).
+time(1..3).
+
+
+
+initiates(frame("Left_of",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),frame("Left_of",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)])) :-
+    var(Color1), var(Color2), var(Shape1), var(Shape2).
+
+initiates(frame("Right_of",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),frame("Right_of",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)])) :-
+    var(Color1), var(Color2), var(Shape1), var(Shape2).
+
+initiates(frame("Above",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),frame("Above",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)])) :-
+    var(Color1), var(Color2), var(Shape1), var(Shape2).
+
+initiates(frame("Below",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),frame("Below",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)])) :-
+    var(Color1), var(Color2), var(Shape1), var(Shape2).
+
+initiates(frame("Left_of",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),frame("Right_of",[fe("Color1",Color2),fe("Shape1",Shape2),fe("Color2",Color1),fe("Shape2",Shape1)])) :-
+    var(Color1), var(Color2), var(Shape1), var(Shape2).
+
+initiates(frame("Right_of",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),frame("Left_of",[fe("Color1",Color2),fe("Shape1",Shape2),fe("Color2",Color1),fe("Shape2",Shape1)])) :-
+    var(Color1), var(Color2), var(Shape1), var(Shape2).
+
+initiates(frame("Above",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),frame("Below",[fe("Color1",Color2),fe("Shape1",Shape2),fe("Color2",Color1),fe("Shape2",Shape1)])) :-
+    var(Color1), var(Color2), var(Shape1), var(Shape2).
+
+initiates(frame("Below",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),frame("Above",[fe("Color1",Color2),fe("Shape1",Shape2),fe("Color2",Color1),fe("Shape2",Shape1)])) :-
+    var(Color1), var(Color2), var(Shape1), var(Shape2).
+
+
+
+initiates(frame("Left_of",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),frame("Left_of_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)])) :-
+    var(Color1), var(Color2), var(Shape1), var(Shape2).
+
+initiates(frame("Right_of",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),frame("Right_of_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)])) :-
+    var(Color1), var(Color2), var(Shape1), var(Shape2).
+
+initiates(frame("Above",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),frame("Above_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)])) :-
+    var(Color1), var(Color2), var(Shape1), var(Shape2).
+
+initiates(frame("Below",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),frame("Below_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)])) :-
+    var(Color1), var(Color2), var(Shape1), var(Shape2).
+
+initiates(frame("Left_of",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),frame("Right_of_indirect",[fe("Color1",Color2),fe("Shape1",Shape2),fe("Color2",Color1),fe("Shape2",Shape1)])) :-
+    var(Color1), var(Color2), var(Shape1), var(Shape2).
+
+initiates(frame("Right_of",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),frame("Left_of_indirect",[fe("Color1",Color2),fe("Shape1",Shape2),fe("Color2",Color1),fe("Shape2",Shape1)])) :-
+    var(Color1), var(Color2), var(Shape1), var(Shape2).
+
+initiates(frame("Above",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),frame("Below_indirect",[fe("Color1",Color2),fe("Shape1",Shape2),fe("Color2",Color1),fe("Shape2",Shape1)])) :-
+    var(Color1), var(Color2), var(Shape1), var(Shape2).
+
+initiates(frame("Below",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),frame("Above_indirect",[fe("Color1",Color2),fe("Shape1",Shape2),fe("Color2",Color1),fe("Shape2",Shape1)])) :-
+    var(Color1), var(Color2), var(Shape1), var(Shape2).
+
+
+
+
+holdsAt(F,T2) :-
+    happensAt(A,T1), initiates(A,F), time(T2), T1 < T2,
+    not stoppedIn(T1,F,T2).
+
+stoppedIn(T1,F,T2) :- 
+    happensAt(A,T), terminates(A,F), time(T1), T1 < T, time(T2), T < T2.
+
+
+
+holdsAt(frame("Left_of_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color3),fe("Shape2",Shape3)]),T) :-
+	holdsAt(frame("Left_of",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),T),
+	holdsAt(frame("Left_of_indirect",[fe("Color1",Color2),fe("Shape1",Shape2),fe("Color2",Color3),fe("Shape2",Shape3)]),T).
+
+holdsAt(frame("Right_of_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color3),fe("Shape2",Shape3)]),T) :-
+	holdsAt(frame("Right_of",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),T),
+	holdsAt(frame("Right_of_indirect",[fe("Color1",Color2),fe("Shape1",Shape2),fe("Color2",Color3),fe("Shape2",Shape3)]),T).
+
+holdsAt(frame("Above_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color3),fe("Shape2",Shape3)]),T) :-
+	holdsAt(frame("Above",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),T),
+	holdsAt(frame("Above_indirect",[fe("Color1",Color2),fe("Shape1",Shape2),fe("Color2",Color3),fe("Shape2",Shape3)]),T).
+
+holdsAt(frame("Below_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color3),fe("Shape2",Shape3)]),T) :-
+	holdsAt(frame("Below",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),T),
+	holdsAt(frame("Below_indirect",[fe("Color1",Color2),fe("Shape1",Shape2),fe("Color2",Color3),fe("Shape2",Shape3)]),T).
+
+
+
+
+
+holdsAt(frame("Left_of_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color3),fe("Shape2",Shape3)]),T) :-
+	holdsAt(frame("Above",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),T),
+	holdsAt(frame("Left_of_indirect",[fe("Color1",Color2),fe("Shape1",Shape2),fe("Color2",Color3),fe("Shape2",Shape3)]),T).
+
+holdsAt(frame("Left_of_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color3),fe("Shape2",Shape3)]),T) :-
+	holdsAt(frame("Above",[fe("Color1",Color2),fe("Shape1",Shape2),fe("Color2",Color1),fe("Shape2",Shape1)]),T),
+	holdsAt(frame("Left_of_indirect",[fe("Color1",Color2),fe("Shape1",Shape2),fe("Color2",Color3),fe("Shape2",Shape3)]),T).
+
+holdsAt(frame("Left_of_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color3),fe("Shape2",Shape3)]),T) :-
+	holdsAt(frame("Below",[fe("Color1",Color3),fe("Shape1",Shape3),fe("Color2",Color2),fe("Shape2",Shape2)]),T),
+	holdsAt(frame("Left_of_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),T).
+
+holdsAt(frame("Left_of_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color3),fe("Shape2",Shape3)]),T) :-
+	holdsAt(frame("Below",[fe("Color1",Color2),fe("Shape1",Shape2),fe("Color2",Color3),fe("Shape2",Shape3)]),T),
+	holdsAt(frame("Left_of_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),T).
+
+
+
+
+
+holdsAt(frame("Right_of_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color3),fe("Shape2",Shape3)]),T) :-
+	holdsAt(frame("Above",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),T),
+	holdsAt(frame("Right_of_indirect",[fe("Color1",Color2),fe("Shape1",Shape2),fe("Color2",Color3),fe("Shape2",Shape3)]),T).
+
+holdsAt(frame("Right_of_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color3),fe("Shape2",Shape3)]),T) :-
+	holdsAt(frame("Above",[fe("Color1",Color2),fe("Shape1",Shape2),fe("Color2",Color1),fe("Shape2",Shape1)]),T),
+	holdsAt(frame("Right_of_indirect",[fe("Color1",Color2),fe("Shape1",Shape2),fe("Color2",Color3),fe("Shape2",Shape3)]),T).
+
+holdsAt(frame("Right_of_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color3),fe("Shape2",Shape3)]),T) :-
+	holdsAt(frame("Below",[fe("Color1",Color3),fe("Shape1",Shape3),fe("Color2",Color2),fe("Shape2",Shape2)]),T),
+	holdsAt(frame("Right_of_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),T).
+
+holdsAt(frame("Right_of_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color3),fe("Shape2",Shape3)]),T) :-
+	holdsAt(frame("Below",[fe("Color1",Color2),fe("Shape1",Shape2),fe("Color2",Color3),fe("Shape2",Shape3)]),T),
+	holdsAt(frame("Right_of_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),T).
+	
+
+
+
+holdsAt(frame("Above_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color3),fe("Shape2",Shape3)]),T) :-
+	holdsAt(frame("Left_of",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),T),
+	holdsAt(frame("Above_indirect",[fe("Color1",Color2),fe("Shape1",Shape2),fe("Color2",Color3),fe("Shape2",Shape3)]),T).
+
+holdsAt(frame("Above_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color3),fe("Shape2",Shape3)]),T) :-
+	holdsAt(frame("Left_of",[fe("Color1",Color2),fe("Shape1",Shape2),fe("Color2",Color1),fe("Shape2",Shape1)]),T),
+	holdsAt(frame("Above_indirect",[fe("Color1",Color2),fe("Shape1",Shape2),fe("Color2",Color3),fe("Shape2",Shape3)]),T).
+
+holdsAt(frame("Above_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color3),fe("Shape2",Shape3)]),T) :-
+	holdsAt(frame("Right_of",[fe("Color1",Color3),fe("Shape1",Shape3),fe("Color2",Color2),fe("Shape2",Shape2)]),T),
+	holdsAt(frame("Above_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),T).
+
+holdsAt(frame("Above_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color3),fe("Shape2",Shape3)]),T) :-
+	holdsAt(frame("Right_of",[fe("Color1",Color2),fe("Shape1",Shape2),fe("Color2",Color3),fe("Shape2",Shape3)]),T),
+	holdsAt(frame("Above_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),T).
+
+
+
+
+holdsAt(frame("Below_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color3),fe("Shape2",Shape3)]),T) :-
+	holdsAt(frame("Left_of",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),T),
+	holdsAt(frame("Below_indirect",[fe("Color1",Color2),fe("Shape1",Shape2),fe("Color2",Color3),fe("Shape2",Shape3)]),T).
+
+holdsAt(frame("Below_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color3),fe("Shape2",Shape3)]),T) :-
+	holdsAt(frame("Left_of",[fe("Color1",Color2),fe("Shape1",Shape2),fe("Color2",Color1),fe("Shape2",Shape1)]),T),
+	holdsAt(frame("Below_indirect",[fe("Color1",Color2),fe("Shape1",Shape2),fe("Color2",Color3),fe("Shape2",Shape3)]),T).
+
+holdsAt(frame("Below_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color3),fe("Shape2",Shape3)]),T) :-
+	holdsAt(frame("Right_of",[fe("Color1",Color3),fe("Shape1",Shape3),fe("Color2",Color2),fe("Shape2",Shape2)]),T),
+	holdsAt(frame("Below_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),T).
+
+holdsAt(frame("Below_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color3),fe("Shape2",Shape3)]),T) :-
+	holdsAt(frame("Right_of",[fe("Color1",Color2),fe("Shape1",Shape2),fe("Color2",Color3),fe("Shape2",Shape3)]),T),
+	holdsAt(frame("Below_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),T).
+
+
+
+
+questionedAt(F,T) :-
+	holdsAt(F,T).
+
+questionedAt(frame("Above_indirect",[fe("Color1",Color1),fe("Shape1",Shape1),fe("Color2",Color2),fe("Shape2",Shape2)]),3)?

@@ -1,0 +1,58 @@
+happensAt(frame("Obtain",[fe("Person",mary),fe("Theme",milk)]),1).
+happensAt(frame("Travel",[fe("Person",john),fe("Place",bedroom)]),2).
+happensAt(frame("Travel",[fe("Person",sandra),fe("Place",bathroom)]),4).
+happensAt(frame("Obtain",[fe("Person",john),fe("Theme",football)]),5).
+happensAt(frame("Travel",[fe("Person",mary),fe("Place",bathroom)]),7).
+happensAt(frame("Giving",[fe("Owner",mary),fe("Theme",milk),fe("Recipient",sandra)]),8).
+happensAt(frame("Travel",[fe("Person",john),fe("Place",bathroom)]),10).
+happensAt(frame("Discard",[fe("Person",john),fe("Theme",football)]),11).
+happensAt(frame("Giving",[fe("Owner",sandra),fe("Theme",milk),fe("Recipient",john)]),13).
+happensAt(frame("Travel",[fe("Person",john),fe("Place",garden)]),14).
+
+
+
+var(bedroom).
+var(bathroom).
+var(office).
+var(hallway).
+var(garden).
+var(kitchen).
+var(milk).
+var(football).
+var(apple).
+var(mary).
+var(john).
+var(sandra).
+var(daniel).
+time(1..15).
+
+
+
+initiates(frame("Obtain",[fe("Person",Person),fe("Theme",Thing)]),frame("Hold",[fe("Person",Person),fe("Theme",Thing)])) :-
+    var(Person), var(Place), var(Thing).
+
+terminates(frame("Discard",[fe("Person",Person),fe("Theme",Thing)]),frame("Hold",[fe("Person",Person),fe("Theme",Thing)])) :-
+    var(Person), var(Place), var(Thing).
+
+initiates(frame("Giving",[fe("Owner",Owner),fe("Theme",Thing),fe("Recipient",Recipient)]),frame("Hold",[fe("Person",Recipient),fe("Theme",Thing)])) :-
+    var(Owner), var(Thing), var(Recipient).
+
+terminates(frame("Giving",[fe("Owner",Owner),fe("Theme",Thing),fe("Recipient",Recipient)]),frame("Hold",[fe("Person",Owner),fe("Theme",Thing)])) :-
+    var(Owner), var(Thing), var(Recipient).
+
+
+
+
+holdsAt(F,T2) :-
+    happensAt(A,T1), initiates(A,F), time(T2), T1 < T2,
+    not stoppedIn(T1,F,T2).
+
+stoppedIn(T1,F,T2) :- 
+    happensAt(A,T), terminates(A,F), time(T1), T1 < T, time(T2), T < T2.
+
+
+
+questionedAt(F,T) :-
+	holdsAt(F,T).
+
+questionedAt(frame("Hold",[fe("Person",Person),fe("Theme",Thing)]),T)?

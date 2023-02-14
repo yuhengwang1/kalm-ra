@@ -1,0 +1,520 @@
+============================1============================
+If the doctor administers a therapy, then the patient undergoes the therapy.
+Cure = index(1,4) - if
+Healer - doctor - index(1,3) - noun - null - null
+Medication - therapy - index(1,6) - noun - null - null
+
+Undergoing = index(1,11) - then
+Entity - patient - index(1,10) - noun - null - null
+Event - therapy - index(1,13) - noun - null - null
+
+============================2============================
+If the patient is a young child who has an unexplained fever, then the doctor must consider UTI.
+People_by_age = index(2,7) - if
+Person - patient - index(2,3) - noun - null - null
+Type - child - index(2,7) - noun - null - null
+
+Medical_conditions = index(2,9) - if
+Patient - child - index(2,7) - noun - null - null
+Degree - unexplained - index(2,11) - adj - null - null
+Aliment - fever - index(2,12) - noun - null - null
+
+Cogitation = index(2,18) - then
+Cognizer - doctor - index(2,16) - noun - null - null
+Topic - uti - index(2,19) - propn - org - null
+
+============================3============================
+If the patient is a young child who has an unexplained fever, then the doctor must assess the degree of toxicity.
+People_by_age = index(3,7) - if
+Person - patient - index(3,3) - noun - null - null
+Type - child - index(3,7) - noun - null - null
+
+Medical_conditions = index(3,9) - if
+Patient - child - index(3,7) - noun - null - null
+Degree - unexplained - index(3,11) - adj - null - null
+Aliment - fever - index(3,12) - noun - null - null
+
+Assessing = index(3,18) - then
+Assessor - doctor - index(3,16) - noun - null - null
+Feature - degree_of_toxicity - index(3,20) - noun - null - null
+
+============================4============================
+If the patient is a young child who has an unexplained fever, then the doctor must assess the degree of dehydration.
+People_by_age = index(4,7) - if
+Person - patient - index(4,3) - noun - null - null
+Type - child - index(4,7) - noun - null - null
+
+Medical_conditions = index(4,9) - if
+Patient - child - index(4,7) - noun - null - null
+Degree - unexplained - index(4,11) - adj - null - null
+Aliment - fever - index(4,12) - noun - null - null
+
+Assessing = index(4,18) - then
+Assessor - doctor - index(4,16) - noun - null - null
+Feature - degree_of_dehydration - index(4,20) - noun - null - null
+
+============================5============================
+If the patient is a young child who has an unexplained fever, then the doctor must assess the ability to retain oral intake.
+People_by_age = index(5,7) - if
+Person - patient - index(5,3) - noun - null - null
+Type - child - index(5,7) - noun - null - null
+
+Medical_conditions = index(5,9) - if
+Patient - child - index(5,7) - noun - null - null
+Degree - unexplained - index(5,11) - adj - null - null
+Aliment - fever - index(5,12) - noun - null - null
+
+Assessing = index(5,18) - then
+Assessor - doctor - index(5,16) - noun - null - null
+Feature - ability - index(5,20) - noun - null - null
+Ability - intake - index(5,24) - noun - null - null
+
+============================6============================
+If the patient is a young child who has an unexplained fever, and the patient is sufficiently ill, then the doctor should analyze the patient's culture of a urine specimen that is obtained by SPA or transurethral catheterization.
+People_by_age = index(6,7) - if
+Person - patient - index(6,3) - noun - null - null
+Type - child - index(6,7) - noun - null - null
+
+Medical_conditions = index(6,9) - if
+Patient - child - index(6,7) - noun - null - null
+Degree - unexplained - index(6,11) - adj - null - null
+Aliment - fever - index(6,12) - noun - null - null
+
+Medical_conditions = index(6,19) - if
+Patient - patient - index(6,16) - noun - null - null
+Degree - sufficiently - index(6,18) - adv - null - null
+Aliment - ill - index(6,19) - adj - null - null
+
+Scrutiny = index(6,25) - then
+Cognizer - doctor - index(6,23) - noun - null - null
+Patient - patient - index(6,27) - noun - null - null
+Specimen - urine - index(6,32) - noun - null - null
+Method - spa - index(6,38) - noun - org - null
+Method - catheterization - index(6,41) - noun - null - null
+
+============================7============================
+If the patient is a young child who has an unexplained fever, and the patient is not sufficiently ill, then the doctor should analyze the patient's culture of a urine specimen that is obtained by SPA, transurethral catheterization, or a convenient method.
+People_by_age = index(7,7) - if
+Person - patient - index(7,3) - noun - null - null
+Type - child - index(7,7) - noun - null - null
+
+Medical_conditions = index(7,9) - if
+Patient - child - index(7,7) - noun - null - null
+Degree - unexplained - index(7,11) - adj - null - null
+Aliment - fever - index(7,12) - noun - null - null
+
+Medical_conditions_not = index(7,20) - if
+Patient - patient - index(7,16) - noun - null - null
+Degree - sufficiently - index(7,19) - adv - null - null
+Aliment - ill - index(7,20) - adj - null - null
+
+Scrutiny = index(7,26) - then
+Cognizer - doctor - index(7,24) - noun - null - null
+Patient - patient - index(7,28) - noun - null - null
+Specimen - urine - index(7,33) - noun - null - null
+Method - spa - index(7,39) - noun - null - null
+Method - catheterization - index(7,42) - noun - null - null
+
+Scrutiny = index(7,26) - then
+Cognizer - doctor - index(7,24) - noun - null - null
+Patient - patient - index(7,28) - noun - null - null
+Specimen - urine - index(7,33) - noun - null - null
+Method - spa - index(7,39) - noun - null - null
+Method - method - index(7,47) - noun - null - null
+
+============================8============================
+If the patient is a young child who has an unexplained fever, the patient is not sufficiently ill, the doctor analyzes the patient's culture of a urine specimen that is obtained by a convenient method, and the analysis of the patient's culture of a urine specimen suggests UTI, then the doctor should analyze the patient's culture of a urine specimen that is obtained by SPA or transurethral catheterization.
+People_by_age = index(8,7) - if
+Person - patient - index(8,3) - noun - null - null
+Type - child - index(8,7) - noun - null - null
+
+Medical_conditions = index(8,9) - if
+Patient - child - index(8,7) - noun - null - null
+Degree - unexplained - index(8,11) - adj - null - null
+Aliment - fever - index(8,12) - noun - null - null
+
+Medical_conditions_not = index(8,19) - if
+Patient - patient - index(8,15) - noun - null - null
+Degree - sufficiently - index(8,18) - adv - null - null
+Aliment - ill - index(8,19) - adj - null - null
+
+Scrutiny = index(8,23) - if
+Cognizer - doctor - index(8,22) - noun - null - null
+Patient - patient - index(8,25) - noun - null - null
+Specimen - urine - index(8,30) - noun - null - null
+
+Suggestion = index(8,52) - if
+Patient - patient - index(8,45) - noun - null - null
+Specimen - urine - index(8,50) - noun - null - null
+Ailment - uti - index(8,53) - propn - null - null
+
+Scrutiny = index(8,59) - then
+Cognizer - doctor - index(8,57) - noun - null - null
+Patient - patient - index(8,61) - noun - null - null
+Specimen - urine - index(8,66) - noun - null - null
+Method - spa - index(8,72) - noun - org - null
+Method - transurethral - index(8,74) - adj - null - null
+
+============================9============================
+If the analysis of the patient's culture of urine specimen confirms UTI, then the patient has UTI.
+Confirmation = index(9,12) - if
+Patient - patient - index(9,6) - noun - null - null
+Specimen - urine - index(9,10) - noun - null - null
+Ailment - uti - index(9,13) - propn - null - null
+
+Medical_conditions = index(9,18) - then
+Patient - patient - index(9,17) - noun - null - null
+Aliment - uti - index(9,19) - propn - null - null
+
+============================10============================
+If the analysis of the patient's culture of urine specimen excludes UTI, then the patient does not have UTI.
+Exclusion = index(10,12) - if
+Patient - patient - index(10,6) - noun - null - null
+Specimen - urine - index(10,10) - noun - null - null
+Ailment - uti - index(10,13) - propn - null - null
+
+Medical_conditions_not = index(10,20) - then
+Patient - patient - index(10,17) - noun - null - null
+Aliment - uti - index(10,21) - propn - org - null
+
+============================11============================
+If the patient is a young child who has an unexplained fever, and the patient is toxic, then the doctor can administer an antimicrobial therapy.
+People_by_age = index(11,7) - if
+Person - patient - index(11,3) - noun - null - null
+Type - child - index(11,7) - noun - null - null
+
+Medical_conditions = index(11,9) - if
+Patient - child - index(11,7) - noun - null - null
+Degree - unexplained - index(11,11) - adj - null - null
+Aliment - fever - index(11,12) - noun - null - null
+
+Toxic_substance = index(11,18) - if
+Victim - patient - index(11,16) - noun - null - null
+
+Cure = index(11,24) - then
+Healer - doctor - index(11,22) - noun - null - null
+Medication - therapy - index(11,27) - noun - null - null
+
+============================12============================
+If the patient is a young child who has an unexplained fever, and the patient is toxic, then the doctor can consider hospitalization.
+People_by_age = index(12,7) - if
+Person - patient - index(12,3) - noun - null - null
+Type - child - index(12,7) - noun - null - null
+
+Medical_conditions = index(12,9) - if
+Patient - child - index(12,7) - noun - null - null
+Degree - unexplained - index(12,11) - adj - null - null
+Aliment - fever - index(12,12) - noun - null - null
+
+Toxic_substance = index(12,18) - if
+Victim - patient - index(12,16) - noun - null - null
+
+Cogitation = index(12,24) - then
+Cognizer - doctor - index(12,22) - noun - null - null
+Topic - hospitalization - index(12,25) - noun - null - null
+
+============================13============================
+If the patient is a young child who has an unexplained fever, and the patient is dehydrated, then the doctor can administer an antimicrobial therapy.
+People_by_age = index(13,7) - if
+Person - patient - index(13,3) - noun - null - null
+Type - child - index(13,7) - noun - null - null
+
+Medical_conditions = index(13,9) - if
+Patient - child - index(13,7) - noun - null - null
+Degree - unexplained - index(13,11) - adj - null - null
+Aliment - fever - index(13,12) - noun - null - null
+
+Cause_to_be_dry = index(13,18) - if
+Dryee - patient - index(13,16) - noun - null - null
+
+Cure = index(13,24) - then
+Healer - doctor - index(13,22) - noun - null - null
+Medication - therapy - index(13,27) - noun - null - null
+
+============================14============================
+If the patient is a young child who has an unexplained fever, and the patient is dehydrated, then the doctor can consider hospitalization.
+People_by_age = index(14,7) - if
+Person - patient - index(14,3) - noun - null - null
+Type - child - index(14,7) - noun - null - null
+
+Medical_conditions = index(14,9) - if
+Patient - child - index(14,7) - noun - null - null
+Degree - unexplained - index(14,11) - adj - null - null
+Aliment - fever - index(14,12) - noun - null - null
+
+Cause_to_be_dry = index(14,18) - if
+Dryee - patient - index(14,16) - noun - null - null
+
+Cogitation = index(14,24) - then
+Cognizer - doctor - index(14,22) - noun - null - null
+Topic - hospitalization - index(14,25) - noun - null - null
+
+============================15============================
+If the patient is a young child who has an unexplained fever, and the patient is not able to retain oral intake, then the doctor can administer an antimicrobial therapy.
+People_by_age = index(15,7) - if
+Person - patient - index(15,3) - noun - null - null
+Type - child - index(15,7) - noun - null - null
+
+Medical_conditions = index(15,9) - if
+Patient - child - index(15,7) - noun - null - null
+Degree - unexplained - index(15,11) - adj - null - null
+Aliment - fever - index(15,12) - noun - null - null
+
+Retaining_not = index(15,21) - if
+Agent - patient - index(15,16) - noun - null - null
+Theme - intake - index(15,23) - noun - null - null
+
+Cure = index(15,29) - then
+Healer - doctor - index(15,27) - noun - null - null
+Medication - therapy - index(15,32) - noun - null - null
+
+============================16============================
+If the patient is a young child who has an unexplained fever, and the patient is not able to retain oral intake, then the doctor can consider hospitalization.
+People_by_age = index(16,7) - if
+Person - patient - index(16,3) - noun - null - null
+Type - child - index(16,7) - noun - null - null
+
+Medical_conditions = index(16,9) - if
+Patient - child - index(16,7) - noun - null - null
+Degree - unexplained - index(16,11) - adj - null - null
+Aliment - fever - index(16,12) - noun - null - null
+
+Retaining_not = index(16,21) - if
+Agent - patient - index(16,16) - noun - null - null
+Theme - intake - index(16,23) - noun - null - null
+
+Cogitation = index(16,29) - then
+Cognizer - doctor - index(16,27) - noun - null - null
+Topic - hospitalization - index(16,30) - noun - null - null
+
+============================17============================
+If the patient is a young child, and the analysis of the patient's culture of a urine specimen confirms UTI, then the doctor should administer a parenteral or oral antimicrobial therapy.
+People_by_age = index(17,7) - if
+Person - patient - index(17,3) - noun - null - null
+Type - child - index(17,7) - noun - null - null
+
+Confirmation = index(17,21) - if
+Patient - patient - index(17,14) - noun - null - null
+Specimen - urine - index(17,19) - noun - null - null
+Ailment - uti - index(17,22) - propn - null - null
+
+Cure = index(17,28) - then
+Healer - doctor - index(17,26) - noun - null - null
+Medication - therapy - index(17,34) - noun - null - null
+
+============================18============================
+If the patient is a young child who has UTI, the patient undergoes an antimicrobial therapy for 2 days, and the patient does not show the expected response of the antimicrobial therapy, then the doctor should reevaluate the patient.
+People_by_age = index(18,7) - if
+Person - patient - index(18,3) - noun - null - null
+Type - child - index(18,7) - noun - null - null
+
+Medical_conditions = index(18,9) - if
+Patient - child - index(18,7) - noun - null - null
+Aliment - uti - index(18,10) - propn - org - null
+
+Undergoing = index(18,14) - if
+Entity - patient - index(18,13) - noun - null - null
+Event - therapy - index(18,17) - noun - null - null
+Duration - day - index(18,20) - noun - null - 2
+
+Responding = index(18,30) - if
+Person - patient - index(18,24) - noun - null - null
+Theme - therapy - index(18,34) - noun - null - null
+
+Evaluation = index(18,40) - then
+Healer - doctor - index(18,38) - noun - null - null
+Patient - patient - index(18,42) - noun - null - null
+
+============================19============================
+If the patient is a young child who has UTI, the patient undergoes an antimicrobial therapy for 2 days, and the patient does not show the expected response of the antimicrobial therapy, then the doctor should analyze the patient's culture of a second urine specimen.
+People_by_age = index(19,7) - if
+Person - patient - index(19,3) - noun - null - null
+Type - child - index(19,7) - noun - null - null
+
+Medical_conditions = index(19,9) - if
+Patient - child - index(19,7) - noun - null - null
+Aliment - uti - index(19,10) - propn - org - null
+
+Undergoing = index(19,14) - if
+Entity - patient - index(19,13) - noun - null - null
+Event - therapy - index(19,17) - noun - null - null
+Duration - day - index(19,20) - noun - null - 2
+
+Responding = index(19,30) - if
+Person - patient - index(19,24) - noun - null - null
+Theme - therapy - index(19,34) - noun - null - null
+
+Scrutiny = index(19,40) - then
+Cognizer - doctor - index(19,38) - noun - null - null
+Patient - patient - index(19,42) - noun - null - null
+Specimen - urine - index(19,48) - noun - null - null
+
+============================20============================
+If the patient is a young child who has UTI, then the doctor must administer an oral antimicrobial therapy that lasts at least 7 days.
+People_by_age = index(20,7) - if
+Person - patient - index(20,3) - noun - null - null
+Type - child - index(20,7) - noun - null - null
+
+Medical_conditions = index(20,9) - if
+Patient - child - index(20,7) - noun - null - null
+Aliment - uti - index(20,10) - propn - null - null
+
+Cure = index(20,16) - then
+Healer - doctor - index(20,14) - noun - null - null
+Medication - therapy - index(20,20) - noun - null - null
+
+Cure = index(20,16) - then
+Entity - doctor - index(20,14) - noun - null - null
+Medication - oral - index(20,18) - adj - null - null
+Limit - least - index(20,24) - adj - null - null
+Days - 7 - index(20,25) - num - null - null
+
+Cure = index(20,16) - then
+Entity - doctor - index(20,14) - noun - null - null
+Medication - antimicrobial - index(20,19) - adj - null - null
+Limit - least - index(20,24) - adj - null - null
+Days - 7 - index(20,25) - num - null - null
+
+============================21============================
+If the patient is a young child who has UTI, then the doctor must administer an oral antimicrobial therapy that lasts at most 14 days.
+People_by_age = index(21,7) - if
+Person - patient - index(21,3) - noun - null - null
+Type - child - index(21,7) - noun - null - null
+
+Medical_conditions = index(21,9) - if
+Patient - child - index(21,7) - noun - null - null
+Aliment - uti - index(21,10) - propn - null - null
+
+Cure = index(21,16) - then
+Healer - doctor - index(21,14) - noun - null - null
+Medication - therapy - index(21,20) - noun - null - null
+
+Cure = index(21,16) - then
+Entity - doctor - index(21,14) - noun - null - null
+Medication - oral - index(21,18) - adj - null - null
+Limit - most - index(21,24) - adj - null - null
+Days - 14 - index(21,25) - num - null - null
+
+Cure = index(21,16) - then
+Entity - doctor - index(21,14) - noun - null - null
+Medication - antimicrobial - index(21,19) - adj - null - null
+Limit - most - index(21,24) - adj - null - null
+Days - 14 - index(21,25) - num - null - null
+
+============================22============================
+If the patient is a young child who has UTI, the antimicrobial therapy of the patient is completed, and the imaging study of the patient is not completed, then the doctor should administer a therapeutically or prophylactically dosed antimicrobial.
+People_by_age = index(22,7) - if
+Person - patient - index(22,3) - noun - null - null
+Type - child - index(22,7) - noun - null - null
+
+Medical_conditions = index(22,9) - if
+Patient - child - index(22,7) - noun - null - null
+Aliment - uti - index(22,10) - propn - org - null
+
+Cure = index(22,36) - then
+Healer - doctor - index(22,34) - noun - null - null
+Medication - antimicrobial - index(22,42) - noun - null - null
+
+============================23============================
+If the patient is a young child who has UTI, the patient undergoes an antimicrobial therapy for 2 days, and the patient does not show the expected response of the antimicrobial therapy, then the doctor can perform ultrasonography promptly.
+People_by_age = index(23,7) - if
+Person - patient - index(23,3) - noun - null - null
+Type - child - index(23,7) - noun - null - null
+
+Medical_conditions = index(23,9) - if
+Patient - child - index(23,7) - noun - null - null
+Aliment - uti - index(23,10) - propn - org - null
+
+Undergoing = index(23,14) - if
+Entity - patient - index(23,13) - noun - null - null
+Event - therapy - index(23,17) - noun - null - null
+Duration - day - index(23,20) - noun - null - 2
+
+Responding = index(23,30) - if
+Person - patient - index(23,24) - noun - null - null
+Theme - therapy - index(23,34) - noun - null - null
+
+Intentionally_act = index(23,40) - then
+Agent - doctor - index(23,38) - noun - null - null
+Study - ultrasonography - index(23,41) - noun - null - null
+Study_property - then - index(23,36) - adv - null - null
+
+Intentionally_act = index(23,40) - then
+Agent - doctor - index(23,38) - noun - null - null
+Study - ultrasonography - index(23,41) - noun - null - null
+Study_property - promptly - index(23,42) - adv - null - null
+
+============================24============================
+If the patient is a young child who has UTI, the patient undergoes an antimicrobial therapy for 2 days, and the patient does not show the expected response of the antimicrobial therapy, then the doctor can perform VCUG or RNC.
+People_by_age = index(24,7) - if
+Person - patient - index(24,3) - noun - null - null
+Type - child - index(24,7) - noun - null - null
+
+Medical_conditions = index(24,9) - if
+Patient - child - index(24,7) - noun - null - null
+Aliment - uti - index(24,10) - propn - org - null
+
+Undergoing = index(24,14) - if
+Entity - patient - index(24,13) - noun - null - null
+Event - therapy - index(24,17) - noun - null - null
+Duration - day - index(24,20) - noun - null - 2
+
+Responding = index(24,30) - if
+Person - patient - index(24,24) - noun - null - null
+Theme - therapy - index(24,34) - noun - null - null
+
+Intentionally_act = index(24,40) - then
+Agent - doctor - index(24,38) - noun - null - null
+Study - vcug - index(24,41) - propn - org - null
+Study - rnc - index(24,43) - propn - org - null
+Study_property - then - index(24,36) - adv - null - null
+
+============================25============================
+If the patient is a young child who has UTI, the patient undergoes an antimicrobial therapy for 2 days, and the patient shows the expected response of the antimicrobial therapy, then the doctor can perform ultrasonography.
+People_by_age = index(25,7) - if
+Person - patient - index(25,3) - noun - null - null
+Type - child - index(25,7) - noun - null - null
+
+Medical_conditions = index(25,9) - if
+Patient - child - index(25,7) - noun - null - null
+Aliment - uti - index(25,10) - propn - org - null
+
+Undergoing = index(25,14) - if
+Entity - patient - index(25,13) - noun - null - null
+Event - therapy - index(25,17) - noun - null - null
+Duration - day - index(25,20) - noun - null - 2
+
+Responding = index(25,28) - if
+Person - patient - index(25,24) - noun - null - null
+Theme - therapy - index(25,32) - noun - null - null
+
+Intentionally_act = index(25,38) - then
+Agent - doctor - index(25,36) - noun - null - null
+Study - ultrasonography - index(25,39) - noun - null - null
+Study_property - then - index(25,34) - adv - null - null
+
+============================26============================
+If the patient is a young child who has UTI, the patient undergoes an antimicrobial therapy for 2 days, and the patient shows the expected response of the antimicrobial therapy, then the doctor can perform VCUG or RNC.
+People_by_age = index(26,7) - if
+Person - patient - index(26,3) - noun - null - null
+Type - child - index(26,7) - noun - null - null
+
+Medical_conditions = index(26,9) - if
+Patient - child - index(26,7) - noun - null - null
+Aliment - uti - index(26,10) - propn - org - null
+
+Undergoing = index(26,14) - if
+Entity - patient - index(26,13) - noun - null - null
+Event - therapy - index(26,17) - noun - null - null
+Duration - day - index(26,20) - noun - null - 2
+
+Responding = index(26,28) - if
+Person - patient - index(26,24) - noun - null - null
+Theme - therapy - index(26,32) - noun - null - null
+
+Intentionally_act = index(26,38) - then
+Agent - doctor - index(26,36) - noun - null - null
+Study - vcug - index(26,39) - propn - org - null
+Study - rnc - index(26,41) - propn - org - null
+Study_property - then - index(26,34) - adv - null - null
+

@@ -1,0 +1,8 @@
+A person goes to a place.
+A person got something.
+A person dropped something.
+Where is a thing before a place?
+A person holds a thing.
+A thing is located in a place.
+A thing is located in a place before another place.
+Where is the milk before bedroom?

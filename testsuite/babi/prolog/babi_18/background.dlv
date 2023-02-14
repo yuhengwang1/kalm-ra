@@ -1,0 +1,53 @@
+% happensAt(frame("Bigger_than",[fe("Entity1",box),fe("Entity2",suitcase)]),1).
+% happensAt(frame("Bigger_than",[fe("Entity1",box),fe("Entity2",chocolate)]),2).
+% happensAt(frame("Bigger_than",[fe("Entity1",container),fe("Entity2",box_of_chocolate)]),3).
+% happensAt(frame("Bigger_than",[fe("Entity1",container),fe("Entity2",suitcase)]),4).
+% happensAt(frame("Bigger_than",[fe("Entity1",box),fe("Entity2",box_of_chocolate)]),5).
+% happensAt(frame("Bigger_than",[fe("Entity1",container),fe("Entity2",chocolate)]),6).
+% happensAt(frame("Bigger_than",[fe("Entity1",container),fe("Entity2",chocolate)]),7).
+% happensAt(frame("Bigger_than",[fe("Entity1",suitcase),fe("Entity2",chocolate)]),8).
+% happensAt(frame("Bigger_than",[fe("Entity1",chest),fe("Entity2",chocolate)]),9).
+% happensAt(frame("Bigger_than",[fe("Entity1",container),fe("Entity2",suitcase)]),10).
+
+happensAt(frame("Bigger_than",[fe("Entity1",chest),fe("Entity2",box)]),1).
+happensAt(frame("Bigger_than",[fe("Entity1",box),fe("Entity2",chocolate)]),2).
+happensAt(frame("Bigger_than",[fe("Entity1",container),fe("Entity2",chocolate)]),3).
+happensAt(frame("Bigger_than",[fe("Entity1",chest),fe("Entity2",box_of_chocolate)]),4).
+happensAt(frame("Bigger_than",[fe("Entity1",suitcase),fe("Entity2",container)]),5).
+
+
+
+var(box).
+var(suitcase).
+var(container).
+var(box_of_chocolate).
+var(chocolate).
+var(chest).
+time(1..6).
+
+
+initiates(frame("Bigger_than",[fe("Entity1",Entity),fe("Entity2",Entity2)]),frame("Bigger_than",[fe("Entity1",Entity),fe("Entity2",Entity2)])) :-
+    var(Entity), var(Entity2),
+    Entity != Entity2.
+
+
+
+holdsAt(F,T2) :-
+    happensAt(A,T1), initiates(A,F), time(T2), T1 < T2,
+    not stoppedIn(T1,F,T2).
+
+stoppedIn(T1,F,T2) :- 
+    happensAt(A,T), terminates(A,F), time(T1), T1 < T, time(T2), T < T2.
+
+
+
+holdsAt(frame("Bigger_than",[fe("Entity1",Entity1),fe("Entity2",Entity2)]),T) :-
+	holdsAt(frame("Bigger_than",[fe("Entity1",Entity1),fe("Entity2",Entity3)]),T),
+	holdsAt(frame("Bigger_than",[fe("Entity1",Entity3),fe("Entity2",Entity2)]),T).
+
+
+
+questionedAt(F,T) :-
+	holdsAt(F,T).
+
+questionedAt(frame("Bigger_than",[fe("Entity1",Entity),fe("Entity2",Entity2)]),T)?
