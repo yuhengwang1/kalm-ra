@@ -50,9 +50,9 @@ https://github.com/yuhengwang1/kalm-fl/blob/main/KALMFL_ICLP2022.pdf -->
 	`If $person goes to $place, then $person is located in $place.`
 5. Run `python kalmra/parser/framebasedparsing/train.py --mode train --ont user`
 
-<!-- # How to start the web app
+# How to start the web app
 1. Command line: `python ./kalmra/run.py`
-2. Start from IDE and run `kalmra/run.py` -->
+2. Start from IDE and run `kalmra/run.py`
 
 # License
 The license of the KALM<sup>RA</sup> code is BSD 3-Clause License.
